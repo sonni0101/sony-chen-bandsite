@@ -1,3 +1,4 @@
     #Ignore scss map files
     *.css.map
     **/.DS_Store
+    *.banbandsite-copydeck-sprint1.md
