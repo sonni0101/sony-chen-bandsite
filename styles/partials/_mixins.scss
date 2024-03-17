@@ -1,0 +1,43 @@
+@import url(./_variables.scss);
+
+@mixin page-header{
+    font-family:$primary-font-bold;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+}
+
+@mixin section-header{
+    font-family:$primary-font-bold;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+}
+
+@mixin subheader{
+    font-family:$primary-font-demi;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@mixin body-copy{
+    font-family:$primary-font-regular;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+
+@mixin footer-copy{
+    font-family:$primary-font-regular;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@mixin button{
+    font-family:$primary-font-bold;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+@mixin label{
+    font-family:$primary-font-bold;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
