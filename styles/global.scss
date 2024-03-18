@@ -191,14 +191,16 @@ a:active{
             flex-direction: row;
             align-items: center;
             max-width: $desktop-total-width;
-            gap: $spacing-64;
+            padding-top: $spacing-4;
+            gap: $spacing-32;
             padding: 0;
         }
 
         @include tablet{
             flex-direction: row;
             align-items: center;
-            gap: $spacing-64;
+            gap: $spacing-8;
+            padding-top: $spacing-4;
             padding: 0 $tablet-spacing-36;
         }
     }
@@ -223,7 +225,7 @@ a:active{
         }
 
         @include tablet{
-            gap: $spacing-32;
+            gap: $spacing-8;
         }
 
         & a:active{
@@ -237,7 +239,7 @@ a:active{
         box-sizing: border-box;
         width: 100%;
 
-        &--inner{
+        &--active{
             width: 100%;
             border-bottom: solid 4px transparent;
             padding: $spacing-16;
