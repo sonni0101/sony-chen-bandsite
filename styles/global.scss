@@ -316,12 +316,24 @@ a:active{
             align-items: center;
             gap: $spacing-16;
 
+            & h2{
+
+            @include desktop{
+                width: 100%;
+            }
+
+            @include tablet{
+                width: 100%;
+            }
+            }
+
             @include desktop{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: $spacing-40;
                 width: 100%;
+                flex: 0.55;
             }
 
             @include tablet{
@@ -330,6 +342,7 @@ a:active{
                 align-items: center;
                 gap: $spacing-40;
                 width: 100%;
+                flex: 0.8;
             }
         }
         }
