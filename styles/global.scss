@@ -57,16 +57,29 @@ p{
     @include desktop-label;
 }
 
+a{
+    color: $link-default;
+    text-decoration: none;
+}
+
+a:hover{
+    color: $link-hover;
+}
+
+a:hover{
+    color: $link-hover;
+}
+
+a:active{
+    color: $link-active;
+}
+
 .section-container{
     min-width: $desktop-total-width;
 }
 
 .secondary-text{
     color: $text-primary-on-dark;
-}
-
-img{
-    width: 100px;
 }
 
 .logo{
@@ -81,6 +94,9 @@ header{
     display: flex;
     background-color: $background-dark;
     justify-content: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 .nav{
@@ -104,7 +120,6 @@ header{
     }
 
 }
-
 
 .footer{
     background-color: $background-dark;

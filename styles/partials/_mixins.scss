@@ -135,6 +135,7 @@
     margin: 0;
 }
 
+//breakpoints
 @mixin desktop-breakpoint{
     @media screen and (min-width: $desktop-breakpoint) {
         
@@ -145,6 +146,14 @@
     @media screen and (min-width: $tablet-breakpoint) {
         
     }
+}
+
+//section controls
+@mixin desktop-section-container{
+    display: flex;
+    justify-content: center;
+    padding: $spacing-48 0;
+    gap: 2.25rem;
 }
 
 

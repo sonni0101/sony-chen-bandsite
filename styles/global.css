@@ -66,16 +66,29 @@ p {
   margin: 0;
 }
 
+a {
+  color: #afafaf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #323232;
+}
+
+a:hover {
+  color: #323232;
+}
+
+a:active {
+  color: #ffffff;
+}
+
 .section-container {
   min-width: 63.75rem;
 }
 
 .secondary-text {
   color: #ffffff;
-}
-
-img {
-  width: 100px;
 }
 
 .logo {
@@ -90,6 +103,9 @@ header {
   display: flex;
   background-color: #323232;
   justify-content: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
 .nav {

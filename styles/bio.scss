@@ -30,27 +30,30 @@ main{
 }
 
 .band-intro{
-    display: flex;
-    justify-content: center;
-    padding: $spacing-48 0;
-    gap: 2.25rem;
+    @include desktop-section-container;
 
     &__section-container{
         max-width: $desktop-total-width;
         display: flex;
         flex-direction: column;
-        gap: 2.25rem;
+        gap: $desktop-spacing-36;
     }
 
     &__image{
         width: 100%;
     }
 
+    &__quote{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+    }
+
     &__content{
         padding: 0 5.5rem;
         display: flex;
         flex-direction: column;
-        gap: 2.25rem;
+        gap: $desktop-spacing-36;
     }
 
     &__description{
@@ -69,10 +72,25 @@ main{
 
 .photo-gallery{
 
-    &__container{
+    @include desktop-section-container;
+
+    &__section-container{
+        max-width: $desktop-total-width;
+        display: flex;
+        flex-direction: column;
+        gap: $desktop-spacing-36;
+    }
+
+    &__images{
         display: flex;
         flex-wrap: wrap;
-        width: 600px;
+        gap: $spacing-24;
+        padding: 0 5.5rem;
+        justify-content: center;
+
+        &--item{
+            width: calc(33.33% - 16px);        
+        }
     }
 }
 
