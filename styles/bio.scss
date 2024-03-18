@@ -4,28 +4,56 @@
 
 .hero{
     display: flex;
-    flex-direction: row;
-    height: 50vh; 
-    background-image: url("/assets/images/hero-bio.jpg");
-    background-position: center;
-    background-size: cover;
-    filter: brightness(50%);
-    z-index: -1; 
+    position: relative;
+    height: 11.625rem; 
+    width: 100vw;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 11.625rem; 
+        background-image: url("../assets/Images/hero-bio.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        filter: brightness(50%);
+
+        @include desktop{
+            height: 39.25rem; 
+            width: 100vw;
+        }
+    
+        @include tablet{
+            height: 40vh; 
+            width: 100vw;
+        }
+    }
 
     @include desktop{
         height: 39.25rem; 
+        width: 100vw;
+    }
+
+    @include tablet{
+        height: 40vh; 
+        width: 100vw;
     }
 
     &__section-container{
         margin: auto;
         width: 100%;
         padding: 0 $spacing-16;
+        z-index: 1;
+    
 
         @include desktop{
             max-width: $desktop-total-width;
         }
 
-        @include desktop{
+        @include tablet{
             padding: 0 $tablet-spacing-36;
         }
     }
@@ -67,6 +95,7 @@
 
         @include tablet{
             gap: $tablet-spacing-36;
+            padding: 0 $tablet-spacing-36;
         }
     }
 
@@ -179,7 +208,8 @@
         @include tablet{
             display: flex;
             flex-direction: column;
-            gap: $tablet-spacing-36;    
+            gap: $tablet-spacing-36; 
+            padding: 0 $tablet-spacing-36;   
         }
     }
 
@@ -208,6 +238,11 @@
 
         &--item{
             width: 100%;
+            filter: grayscale(1);
+
+            &:hover{
+                filter: grayscale(0);
+            }
 
             @include desktop{
                 width: calc(33.33% - 16px); 

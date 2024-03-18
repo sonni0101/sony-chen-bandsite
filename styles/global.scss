@@ -27,14 +27,14 @@ body {
 	margin: 0;
 	padding: 0;
     font-family: "Avenir Next LT Pro", sans-serif;
-    padding-top: 3.5rem;
+    padding-top: 6.375rem;
 
     @include desktop{
-        padding-top: 6.25rem;
+        padding-top: 4.28125rem;
     }
 
     @include tablet{
-        padding-top: 3.28125rem;
+        padding-top: 4.28125rem;
     }
 }
 
@@ -64,6 +64,7 @@ h2{
 
 h3{
     @include mobile-subheader;
+    color: $text-primary-on-light;
 
     @include desktop{
         @include desktop-subheader;
@@ -75,6 +76,7 @@ h3{
 }
 
 h4{
+    color: $text-primary-on-light;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;    
@@ -92,6 +94,7 @@ h4{
 }
 
 p{
+    color: $text-secondary;
     @include mobile-body-copy;
 
     @include desktop{
@@ -101,6 +104,10 @@ p{
     @include tablet{
         @include tablet-body-copy;    
     }
+}
+
+.quote{
+    color: $text-primary-on-light;
 }
 
 .footer-copy{
@@ -180,6 +187,7 @@ a:active{
             align-items: center;
             max-width: $desktop-total-width;
             gap: $spacing-64;
+            padding: 0;
         }
 
         @include tablet{
@@ -263,13 +271,14 @@ a:active{
 
     @include desktop{
         min-width: $desktop-total-width;
-        padding: 0;
+        padding: $tablet-spacing-36 0;
         gap: $spacing-40;
     }
 
     @include tablet{
-        padding: $tablet-spacing-36 0;
+        padding: $spacing-48 0;
         gap: $tablet-spacing-36;
+        width: 100%;
     }
     }
 
@@ -366,7 +375,8 @@ a:active{
         @include tablet{
             display: flex;
             flex-direction: row;
-            gap: $spacing-64;        
+            gap: $spacing-64; 
+            justify-content: space-between;       
         }
 
         &--detials{

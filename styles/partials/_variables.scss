@@ -15,7 +15,6 @@ $button-default: $primary-silver;
 $button-hover: $secondary-bandsite-dark-black;
 $button-active: $primary-whilte;
 $link-default: $primary-silver;
-// $link-hover: $secondary-bandsite-dark-black;
 $link-active: $primary-whilte;
 $divider: $secondary-mercury;
 $background-light-alt: $secondary-alabaster;
@@ -36,13 +35,15 @@ $spacing-96: 6rem;
 $desktop-spacing-36: 2.25rem;
 $desktop-spacing-48: $spacing-48;
 $tablet-spacing-36: 2.25rem;
+$tablet-spacing-48: $spacing-48;
 $mobile-spacing-24: $spacing-24;
 $mobile-spacing-16: $spacing-16;
 
 
 //breakpoint
 $desktop-breakpoint: 1280px;
-$tablet-breakpoint: 768px;
+$tablet-min-breakpoint: 768px;
+$tablet-max-breakpoint: 1279px;
 $mobile-breakpoint: 320px;
 
 //grids
