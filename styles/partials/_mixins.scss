@@ -1,6 +1,21 @@
 @import "./variables.scss";
 
+@mixin logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-primary-on-dark;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 @mixin mobile-page-header{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+@mixin mobile-section-header{
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -107,6 +122,13 @@
     margin: 0;
 }
 
+@mixin tablet-subheader{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
 @mixin tablet-body-copy{
     font-weight: 400;
     font-size: 0.875rem;
@@ -136,15 +158,15 @@
 }
 
 //breakpoints
-@mixin desktop-breakpoint{
+@mixin desktop{
     @media screen and (min-width: $desktop-breakpoint) {
-        
+        @content;
     }
 }
 
-@mixin tablet-breakpoint{
+@mixin tablet{
     @media screen and (min-width: $tablet-breakpoint) {
-        
+        @content;
     }
 }
 
@@ -153,7 +175,13 @@
     display: flex;
     justify-content: center;
     padding: $spacing-48 0;
-    gap: 2.25rem;
+    gap: $desktop-spacing-36;
+}
+
+@mixin mobile-section-container{
+    display: flex;
+    padding: $spacing-24 0;
+    gap: $mobile-spacing-16;
 }
 
 

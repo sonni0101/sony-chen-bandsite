@@ -23,19 +23,55 @@
     box-sizing: border-box;
 }
 
-html,
 body {
 	margin: 0;
 	padding: 0;
     font-family: "Avenir Next LT Pro", sans-serif;
+    padding-top: 3.5rem;
+
+    @include desktop{
+        padding-top: 6.25rem;
+    }
+
+    @include tablet{
+        padding-top: 3.28125rem;
+    }
+}
+
+h1{
+    @include mobile-page-header;
+
+    @include desktop{
+        @include desktop-page-header;
+    }
+
+    @include tablet{
+        @include tablet-page-header;
+    }
 }
 
 h2{
-    @include desktop-section-header;
+    @include mobile-section-header;
+
+    @include desktop{
+        @include desktop-section-header;
+    }
+
+    @include tablet{
+        @include tablet-section-header;
+    }
 }
 
 h3{
-    @include desktop-subheader
+    @include mobile-subheader;
+
+    @include desktop{
+        @include desktop-subheader;
+    }
+
+    @include tablet{
+        @include tablet-subheader;
+    }
 }
 
 h4{
@@ -43,35 +79,77 @@ h4{
     font-size: 0.875rem;
     line-height: 1.25rem;    
     margin: 0;
+
+    @include desktop{
+        font-size: 0.8125rem;
+        line-height: 1.125rem;    
+    }
+
+    @include tablet{
+        font-size: 0.8125rem;
+        line-height: 1.125rem;  
+    }
 }
 
 p{
-    @include desktop-body-copy;
+    @include mobile-body-copy;
+
+    @include desktop{
+        @include desktop-body-copy;    
+    }
+
+    @include tablet{
+        @include tablet-body-copy;    
+    }
 }
 
 .footer-copy{
-    @include desktop-footer-copy;
+    @include mobile-footer-copy;
+
+    @include desktop{
+        @include desktop-footer-copy;
+    }
+
+    @include tablet{
+        @include tablet-footer-copy;
+    }
 }
 
 .labe-copy{
-    @include desktop-label;
+    @include mobile-label;
+
+    @include desktop{
+        @include desktop-label;
+    }
+
+    @include tablet{
+        @include tablet-label;
+    }
 }
 
 a{
     color: $link-default;
     text-decoration: none;
-}
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
 
-a:hover{
-    color: $link-hover;
-}
+    @include desktop{
+        font-size: 0.875rem;
+        line-height: 1.25rem;  
+        font-weight: 400; 
+        }
 
-a:hover{
-    color: $link-hover;
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.25rem;   
+        font-weight: 400;
+        }
 }
 
 a:active{
     color: $link-active;
+    font-weight: 700; 
 }
 
 .section-container{
@@ -82,40 +160,77 @@ a:active{
     color: $text-primary-on-dark;
 }
 
-.logo{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $text-primary-on-dark;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-header{
+.nav{
     display: flex;
     background-color: $background-dark;
     justify-content: center;
     position: fixed;
     z-index: 1;
     width: 100%;
-}
+    top: 0;
 
-.nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-width: $desktop-total-width;
+    &__section-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: $spacing-16;
+    
+        @include desktop{
+            flex-direction: row;
+            align-items: center;
+            max-width: $desktop-total-width;
+            gap: $spacing-64;
+        }
+
+        @include tablet{
+            flex-direction: row;
+            align-items: center;
+            gap: $spacing-64;
+            padding: 0 $tablet-spacing-36;
+        }
+    }
+
+
+    &__logo{
+        text-align: center;
+        @include logo;
+    }
 
     &__link{
-
         display: flex;
         flex-direction: row;
         list-style-type: none;
         color: $link-default;
         margin: 0;
+        padding: 0;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include tablet{
+            gap: $spacing-32;
+        }
 
         &--item{
             color: $link-default;
-            padding: 1.5rem 1rem;
+            padding: $spacing-16;
+            text-align: center;
+            padding: $spacing-24 0;
+            min-width: $desktop-column-width;
+            box-sizing: border-box;
+            width: 100%;
+
+            &:active{
+                border-bottom: 4px solid white;
+                box-sizing: border-box;
+            }
+
+            @include desktop{
+                padding: $spacing-24 $spacing-16;
+                margin: 0 $spacing-16;
+            }
         }
     }
 
@@ -123,32 +238,76 @@ header{
 
 .footer{
     background-color: $background-dark;
-    justify-content: center;
     display: flex;
     align-items: center;
+    padding: $spacing-24 $spacing-16;
+
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 
     &__section-container{
-        min-width: $desktop-total-width;
-        padding: $spacing-48 0;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: $spacing-24;
+
+    @include desktop{
+        min-width: $desktop-total-width;
+        padding: $spacing-48 0;
+        gap: $spacing-40;
+    }
     }
 
     &__header-container{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+        flex-direction: column;
 
-        &--left{
+        @include desktop{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            gap: $spacing-40;
+            width: 100%;
         }
-    }
+        &--left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-16;
+
+            @include desktop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: $spacing-40;
+                width: 100%;
+            }
+        }
+        }
+
+        &__logo{
+            @include logo;
+
+            &--top{
+                @include logo;
+                display: none;
+
+                @include desktop{
+                    display: block;  
+                }
+            }
+
+            &--bottom{
+                @include logo;
+
+                @include desktop{
+                    display: none;  
+                }
+            }
+        }
 
     &__header{
         display: flex;
@@ -158,13 +317,23 @@ header{
 
     &__company{
         display: flex;
-        flex-direction: row;
-        gap: $spacing-64;
+        flex-direction: column;
+        gap: $spacing-24;
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-64;        
+        }
 
         &--detials{
             display: flex;
             flex-direction: column;
-            gap: $spacing-24;
+            gap: $spacing-16;
+
+            @include desktop{
+                gap: $spacing-24;
+            }
         }
     }
 
@@ -172,10 +341,21 @@ header{
         display: flex;
         flex-direction: row;
         gap: $spacing-24;
+        width: 100%;
+
+        @include desktop{
+            gap: $spacing-24;
+        }
 
         &--icon{
             height: 1.5rem;
             width: 1.5rem;
         }
+    }
+
+    &__legal{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
     }
 }

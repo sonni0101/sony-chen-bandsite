@@ -2,41 +2,60 @@
 @import "./partials/variables.scss";
 @import "./global.scss";
 
-main{
-    max-width: 1020px;
-}
-
 .hero{
     display: flex;
     flex-direction: row;
+    height: 50vh; 
     background-image: url("/assets/images/hero-bio.jpg");
     background-position: center;
     background-size: cover;
-    height: 39.25rem; 
-    position: relative;
-    justify-content: center;
+    filter: brightness(50%);
+    z-index: -1; 
+
+    @include desktop{
+        height: 39.25rem; 
+    }
 
     &__section-container{
         margin: auto;
-        min-width: $desktop-total-width;
+        width: 100%;
+        padding: 0 $spacing-16;
+
+        @include desktop{
+            max-width: $desktop-total-width;
+        }
     }
 
     &__page-header{
         color: $text-primary-on-dark;
-        @include desktop-page-header;
         display: flex;
-        align-items: center;
+
+        @include desktop{
+            display: flex;
+            align-items: center;        
+        }
     }
 }
 
 .band-intro{
-    @include desktop-section-container;
+    @include mobile-section-container;
+
+    @include desktop{
+        @include desktop-section-container;
+    }
 
     &__section-container{
-        max-width: $desktop-total-width;
         display: flex;
         flex-direction: column;
-        gap: $desktop-spacing-36;
+        gap: $mobile-spacing-16;
+        padding: 0 $spacing-16;
+
+        @include desktop{
+            max-width: $desktop-total-width;
+            display: flex;
+            flex-direction: column;
+            gap: $desktop-spacing-36;
+        }
     }
 
     &__image{
@@ -46,25 +65,49 @@ main{
     &__quote{
         display: flex;
         flex-direction: column;
-        gap: $spacing-16;
+        gap: $spacing-8;
+
+        @include desktop{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-16;
+        }
     }
 
     &__content{
-        padding: 0 5.5rem;
         display: flex;
         flex-direction: column;
-        gap: $desktop-spacing-36;
+        gap: $mobile-spacing-16;
+
+        @include desktop{
+            padding: 0 5.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: $desktop-spacing-36;
+        }
     }
 
     &__description{
         display: flex;
         flex-direction: column;
-        gap: 2.25rem;
+        gap: $mobile-spacing-16;
+
+        @include desktop{
+            display: flex;
+            flex-direction: column;
+            gap: $desktop-spacing-36;
+        }
 
         &--detail{
             display: flex;
-            flex-direction: row;
-            gap: $spacing-32;
+            flex-direction: column;
+            gap: $spacing-16;
+
+            @include desktop{
+                display: flex;
+                flex-direction: row;
+                gap: $spacing-32;
+            }
         }
     }
 
@@ -72,24 +115,45 @@ main{
 
 .photo-gallery{
 
-    @include desktop-section-container;
+    @include mobile-section-container;
+
+    @include desktop{
+        @include desktop-section-container;
+    }
 
     &__section-container{
-        max-width: $desktop-total-width;
         display: flex;
         flex-direction: column;
-        gap: $desktop-spacing-36;
+        gap: $mobile-spacing-16;
+        padding: 0 $spacing-16;
+
+        @include desktop{
+            max-width: $desktop-total-width;
+            display: flex;
+            flex-direction: column;
+            gap: $desktop-spacing-36;    
+        }
     }
 
     &__images{
         display: flex;
-        flex-wrap: wrap;
-        gap: $spacing-24;
-        padding: 0 5.5rem;
-        justify-content: center;
+        flex-direction: column;
+        gap: $spacing-16;
+
+        @include desktop{
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-24;
+            padding: 0 5.5rem;
+            justify-content: center;  
+        }
 
         &--item{
-            width: calc(33.33% - 16px);        
+            width: 100%;
+
+            @include desktop{
+                width: calc(33.33% - 16px); 
+            }    
         }
     }
 }
