@@ -76,7 +76,6 @@ h3{
 }
 
 h4{
-    color: $text-primary-on-light;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;    
@@ -94,7 +93,6 @@ h4{
 }
 
 p{
-    color: $text-secondary;
     @include mobile-body-copy;
 
     @include desktop{
@@ -104,6 +102,14 @@ p{
     @include tablet{
         @include tablet-body-copy;    
     }
+}
+
+.text-light{
+    color: $text-primary-on-light;
+}
+
+.text-dark{
+    color: $text-primary-on-dark;
 }
 
 .quote{
@@ -156,7 +162,6 @@ a{
 
 a:active{
     color: $link-active;
-    font-weight: 700; 
 }
 
 .section-container{
@@ -221,12 +226,15 @@ a:active{
             gap: $spacing-32;
         }
 
+        & a:active{
+            font-weight: 700; 
+        }
+
         &--item{
             color: $link-default;
             padding: $spacing-16;
             text-align: center;
             padding: $spacing-24 0;
-            min-width: $desktop-column-width;
             box-sizing: border-box;
             width: 100%;
 
