@@ -1,43 +1,153 @@
-@import url(./_variables.scss);
+@import "./variables.scss";
 
-@mixin page-header{
-    font-family:$primary-font-bold;
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-}
-
-@mixin section-header{
-    font-family:$primary-font-bold;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-}
-
-@mixin subheader{
-    font-family:$primary-font-demi;
+@mixin mobile-page-header{
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
+    margin: 0;
 }
 
-@mixin body-copy{
-    font-family:$primary-font-regular;
+@mixin mobile-subheader{
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    margin: 0;
 }
 
-@mixin footer-copy{
-    font-family:$primary-font-regular;
+@mixin mobile-body-copy{
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    margin: 0;
+}
+
+@mixin mobile-footer-copy{
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    margin: 0;
+}
+
+@mixin mobile-button{
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+@mixin mobile-label{
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+// desktop
+@mixin desktop-page-header{
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin: 0;
+}
+
+@mixin desktop-subheader{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+@mixin desktop-section-header{
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 0;
+}
+
+@mixin desktop-body-copy{
+    font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    margin: 0;
 }
 
-@mixin button{
-    font-family:$primary-font-bold;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+@mixin desktop-footer-copy{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;    
+    margin: 0;
 }
 
-@mixin label{
-    font-family:$primary-font-bold;
+@mixin desktop-button{
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+@mixin desktop-label{
+    font-weight: 700;
     font-size: 0.75rem;
     line-height: 1.25rem;
+    margin: 0;
 }
+
+// tablet
+@mixin tablet-page-header{
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin: 0;
+}
+
+@mixin tablet-section-header{
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 0;
+}
+
+@mixin tablet-body-copy{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;   
+    margin: 0; 
+}
+
+@mixin tablet-footer-copy{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.25rem;  
+    margin: 0;  
+}
+
+@mixin tablet-button{
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+@mixin tablet-label{
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+@mixin desktop-breakpoint{
+    @media screen and (min-width: $desktop-breakpoint) {
+        
+    }
+}
+
+@mixin tablet-breakpoint{
+    @media screen and (min-width: $tablet-breakpoint) {
+        
+    }
+}
+
+
+
+
+

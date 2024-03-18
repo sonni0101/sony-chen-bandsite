@@ -1,3 +1,78 @@
-@import url("./global.scss");
-@import url("./partials/_mixins.scss");
-@import url("./partials/_variables.scss");
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
+@import "./global.scss";
+
+main{
+    max-width: 1020px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: row;
+    background-image: url("/assets/images/hero-bio.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 39.25rem; 
+    position: relative;
+    justify-content: center;
+
+    &__section-container{
+        margin: auto;
+        min-width: $desktop-total-width;
+    }
+
+    &__page-header{
+        color: $text-primary-on-dark;
+        @include desktop-page-header;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.band-intro{
+    display: flex;
+    justify-content: center;
+    padding: $spacing-48 0;
+    gap: 2.25rem;
+
+    &__section-container{
+        max-width: $desktop-total-width;
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
+    }
+
+    &__image{
+        width: 100%;
+    }
+
+    &__content{
+        padding: 0 5.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
+
+        &--detail{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-32;
+        }
+    }
+
+}
+
+.photo-gallery{
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+}
+

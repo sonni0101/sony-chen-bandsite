@@ -1,24 +1,166 @@
-@import url("./partials/_mixins.scss");
-@import url("./partials/_variables.scss");
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
 
 @font-face {
-	font-family: $primary-font-regular;
-	src: url("/sony-chen-bandsite/assets/fonts/AvenirNextLTPro-Regular.otf")
-		format(opentype);
+	font-family: "Avenir Next LT Pro";
+    src: url("../assets/fonts/AvenirNextLTPro-Regular.otf");
+    font-weight: 400;
 }
 
 @font-face{
-    font-family: $primary-font-demi;
-    src: url(/sony-chen-bandsite/assets/fonts/AvenirNextLTPro-Demi.otf) 
-        format(opentype);
+    font-family: "Avenir Next LT Pro";
+    src: url("../assets/fonts/AvenirNextLTPro-Demi.otf");
+    font-weight: 600;
 }
 
 @font-face{
-    font-family: $primary-font-bold;
-    src: url(/sony-chen-bandsite/assets/fonts/AvenirNextLTPro-Bold.otf)
-        format(opentype);
+    font-family: "Avenir Next LT Pro";
+    src: url("../assets/fonts/AvenirNextLTPro-Bold.otf");
+    font-weight: 700;
 }
 
 * {
     box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+    font-family: "Avenir Next LT Pro", sans-serif;
+}
+
+h2{
+    @include desktop-section-header;
+}
+
+h3{
+    @include desktop-subheader
+}
+
+h4{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;    
+    margin: 0;
+}
+
+p{
+    @include desktop-body-copy;
+}
+
+.footer-copy{
+    @include desktop-footer-copy;
+}
+
+.labe-copy{
+    @include desktop-label;
+}
+
+.section-container{
+    min-width: $desktop-total-width;
+}
+
+.secondary-text{
+    color: $text-primary-on-dark;
+}
+
+img{
+    width: 100px;
+}
+
+.logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-primary-on-dark;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+header{
+    display: flex;
+    background-color: $background-dark;
+    justify-content: center;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: $desktop-total-width;
+
+    &__link{
+
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        color: $link-default;
+        margin: 0;
+
+        &--item{
+            color: $link-default;
+            padding: 1.5rem 1rem;
+        }
+    }
+
+}
+
+
+.footer{
+    background-color: $background-dark;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    &__section-container{
+        min-width: $desktop-total-width;
+        padding: $spacing-48 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__header-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &--left{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $spacing-40;
+        }
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__company{
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-64;
+
+        &--detials{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-24;
+        }
+    }
+
+    &__social-media{
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-24;
+
+        &--icon{
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
 }
