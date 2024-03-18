@@ -185,6 +185,14 @@
 }
 
 
+@mixin tablet-section-container{
+    display: flex;
+    padding-top: $spacing-48;
+    gap: $tablet-spacing-36;
+}
+
+
+
 
 
 

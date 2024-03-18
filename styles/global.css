@@ -318,6 +318,14 @@ a:active {
     padding: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding: 0 2.25rem;
+  }
+}
 .footer__section-container {
   display: flex;
   flex-direction: column;
@@ -326,8 +334,14 @@ a:active {
 @media screen and (min-width: 1280px) {
   .footer__section-container {
     min-width: 63.75rem;
-    padding: 3rem 0;
+    padding: 0;
     gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__section-container {
+    padding: 2.25rem 0;
+    gap: 2.25rem;
   }
 }
 .footer__header-container {
@@ -343,6 +357,15 @@ a:active {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
 .footer__header-container--left {
   display: flex;
   flex-direction: column;
@@ -350,6 +373,15 @@ a:active {
   gap: 1rem;
 }
 @media screen and (min-width: 1280px) {
+  .footer__header-container--left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer__header-container--left {
     display: flex;
     flex-direction: row;
@@ -378,6 +410,11 @@ a:active {
     display: block;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__logo--top {
+    display: block;
+  }
+}
 .footer__logo--bottom {
   text-transform: uppercase;
   text-decoration: none;
@@ -386,6 +423,11 @@ a:active {
   font-weight: 400;
 }
 @media screen and (min-width: 1280px) {
+  .footer__logo--bottom {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer__logo--bottom {
     display: none;
   }
@@ -401,6 +443,13 @@ a:active {
   gap: 1.5rem;
 }
 @media screen and (min-width: 1280px) {
+  .footer__company {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer__company {
     display: flex;
     flex-direction: row;

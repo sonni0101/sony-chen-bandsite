@@ -24,6 +24,10 @@
         @include desktop{
             max-width: $desktop-total-width;
         }
+
+        @include desktop{
+            padding: 0 $tablet-spacing-36;
+        }
     }
 
     &__page-header{
@@ -44,6 +48,10 @@
         @include desktop-section-container;
     }
 
+    @include tablet{
+        @include tablet-section-container;
+    }
+
     &__section-container{
         display: flex;
         flex-direction: column;
@@ -55,6 +63,10 @@
             display: flex;
             flex-direction: column;
             gap: $desktop-spacing-36;
+        }
+
+        @include tablet{
+            gap: $tablet-spacing-36;
         }
     }
 
@@ -72,6 +84,12 @@
             flex-direction: column;
             gap: $spacing-16;
         }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-8;
+        }
     }
 
     &__content{
@@ -84,6 +102,13 @@
             display: flex;
             flex-direction: column;
             gap: $desktop-spacing-36;
+        }
+
+        @include tablet{
+            padding: 0 $spacing-64;
+            display: flex;
+            flex-direction: column;
+            gap: $tablet-spacing-36;
         }
     }
 
@@ -98,6 +123,13 @@
             gap: $desktop-spacing-36;
         }
 
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-24;
+        }
+
+
         &--detail{
             display: flex;
             flex-direction: column;
@@ -107,6 +139,12 @@
                 display: flex;
                 flex-direction: row;
                 gap: $spacing-32;
+            }
+
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+                gap: $spacing-24;
             }
         }
     }
@@ -121,6 +159,10 @@
         @include desktop-section-container;
     }
 
+    @include tablet{
+        @include tablet-section-container;
+    }
+
     &__section-container{
         display: flex;
         flex-direction: column;
@@ -133,6 +175,12 @@
             flex-direction: column;
             gap: $desktop-spacing-36;    
         }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: $tablet-spacing-36;    
+        }
     }
 
     &__images{
@@ -142,9 +190,19 @@
 
         @include desktop{
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
             gap: $spacing-24;
             padding: 0 5.5rem;
+            justify-content: center;  
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: $spacing-24;
+            padding: 0 $spacing-64;
             justify-content: center;  
         }
 
@@ -152,6 +210,10 @@
             width: 100%;
 
             @include desktop{
+                width: calc(33.33% - 16px); 
+            }   
+
+            @include tablet{
                 width: calc(33.33% - 16px); 
             }    
         }

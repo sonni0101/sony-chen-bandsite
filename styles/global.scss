@@ -249,6 +249,13 @@ a:active{
         padding: 0;
     }
 
+    @include tablet{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding: 0 $tablet-spacing-36; 
+    }
+
     &__section-container{
         display: flex;
         flex-direction: column;
@@ -256,8 +263,13 @@ a:active{
 
     @include desktop{
         min-width: $desktop-total-width;
-        padding: $spacing-48 0;
+        padding: 0;
         gap: $spacing-40;
+    }
+
+    @include tablet{
+        padding: $tablet-spacing-36 0;
+        gap: $tablet-spacing-36;
     }
     }
 
@@ -272,6 +284,15 @@ a:active{
             align-items: center;
             width: 100%;
         }
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
         &--left{
             display: flex;
             flex-direction: column;
@@ -279,6 +300,14 @@ a:active{
             gap: $spacing-16;
 
             @include desktop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: $spacing-40;
+                width: 100%;
+            }
+
+            @include tablet{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -298,12 +327,20 @@ a:active{
                 @include desktop{
                     display: block;  
                 }
+
+                @include tablet{
+                    display: block;  
+                }
             }
 
             &--bottom{
                 @include logo;
 
                 @include desktop{
+                    display: none;  
+                }
+
+                @include tablet{
                     display: none;  
                 }
             }
@@ -321,6 +358,12 @@ a:active{
         gap: $spacing-24;
 
         @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-64;        
+        }
+
+        @include tablet{
             display: flex;
             flex-direction: row;
             gap: $spacing-64;        
