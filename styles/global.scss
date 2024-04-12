@@ -164,9 +164,9 @@ a:active{
     color: $link-active;
 }
 
-.section-container{
-    min-width: $desktop-total-width;
-}
+// .section-container{
+//     min-width: $desktop-total-width;
+// }
 
 .secondary-text{
     color: $text-primary-on-dark;
@@ -241,17 +241,26 @@ a:active{
 
         &--active{
             width: 100%;
+            border-bottom: solid 4px white;
+            padding: $spacing-16;
+            display: block;
+            padding: $spacing-24;
+            font-weight: 700; 
+            box-sizing: border-box;
+
+            @include desktop{
+                padding: $spacing-24 $spacing-16;
+                margin: 0 $spacing-16;
+            }
+        }
+
+        &--default{
+            width: 100%;
             border-bottom: solid 4px transparent;
             padding: $spacing-16;
             display: block;
             padding: $spacing-24;
-
-
-            &:active{
-                border-bottom: 4px solid white;
-                box-sizing: border-box;
-                font-weight: 700; 
-            }
+            box-sizing: border-box;
 
             @include desktop{
                 padding: $spacing-24 $spacing-16;

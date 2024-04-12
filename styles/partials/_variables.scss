@@ -10,14 +10,14 @@ $secondary-alabaster: #fafafa;
 $text-primary-on-light: $primary-bandsite-black;
 $text-primary-on-dark: $primary-whilte;
 $text-secondary: $primary-silver;
+$background-light-alt: $secondary-alabaster;
 $background-dark: $primary-bandsite-black;
 $button-default: $primary-silver;
 $button-hover: $secondary-bandsite-dark-black;
 $button-active: $primary-whilte;
-$link-default: $primary-silver;
+$link-default: $secondary-mercury;
 $link-active: $primary-whilte;
 $divider: $secondary-mercury;
-$background-light-alt: $secondary-alabaster;
 
 // spacing tokens
 $spacing-0: 0rem; 

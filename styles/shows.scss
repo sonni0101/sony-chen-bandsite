@@ -1,0 +1,72 @@
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
+@import "./global.scss";
+
+.hero{
+    display: flex;
+    position: relative;
+    height: 11.625rem; 
+    width: 100vw;
+
+    &::before {
+        background-image: url("../assets/images/hero-shows.jpg");
+        @include background-image;
+
+        @include desktop{
+            height: 39.25rem; 
+            width: 100vw;
+        }
+    
+        @include tablet{
+            height: 40vh; 
+            width: 100vw;
+        }
+    }
+
+    @include desktop{
+        height: 39.25rem; 
+        width: 100vw;
+    }
+
+    @include tablet{
+        height: 40vh; 
+        width: 100vw;
+    }
+
+    &__section-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        padding: 0 $spacing-16;
+        z-index: 1;
+    
+
+        @include desktop{
+            max-width: $desktop-total-width;
+            gap: $spacing-64;
+        }
+
+        @include tablet{
+            padding: 0 $tablet-spacing-36;
+        }
+    }
+
+    &__music-content{
+
+        &--page-header{
+            color: $text-primary-on-dark;
+            display: flex;
+    
+            @include desktop{
+                display: flex;
+                align-items: center;        
+            }
+        }
+    }
+
+    &__soundsCloud{
+        flex: 1;
+    }
+}

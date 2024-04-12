@@ -192,6 +192,20 @@
     gap: $tablet-spacing-36;
 }
 
+@mixin background-image{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 11.625rem; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+
 
 
 

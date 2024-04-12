@@ -9,17 +9,9 @@
     width: 100vw;
 
     &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 11.625rem; 
         background-image: url("../assets/Images/hero-bio.jpg");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        filter: brightness(50%);
+        @include background-image;
+
 
         @include desktop{
             height: 39.25rem; 
@@ -181,7 +173,7 @@
 }
 
 .photo-gallery{
-
+    background-color: $background-light-alt;
     @include mobile-section-container;
 
     @include desktop{
