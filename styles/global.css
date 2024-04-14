@@ -34,6 +34,10 @@ body {
   }
 }
 
+.bold {
+  font-weight: 600;
+}
+
 h1 {
   font-weight: 700;
   font-size: 1.5rem;
@@ -228,6 +232,35 @@ a {
 
 a:active {
   color: #ffffff;
+}
+
+button {
+  height: 2.5rem;
+  width: 100%;
+  background: #323232;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  button {
+    font-weight: 700;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+    min-width: 9.375rem;
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+button:hover {
+  background: #000000;
 }
 
 .secondary-text {

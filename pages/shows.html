@@ -34,7 +34,7 @@
             <div class="shows">
                 <div class="shows__section-container">
                     <div class="shows__wrapper">
-                        <h2>Shows</h2>
+                        <h2 class="shows__heading">Shows</h2>
                             <div class="shows__table">
                                 <div class="shows__table-headers-wrapper">
                                     <div class="shows__table-header"><p>Date</p></div>
@@ -44,12 +44,27 @@
                                 </div>
 
                                 <div class="shows__ticket-info-wrapper">
-                                    <div class="shows__ticket-info"><p>Mon Sept 09 2024</p></div>
-                                    <div class="shows__ticket-info"><p>Ronald Lane</p></div>
-                                    <div class="shows__ticket-info"><p>San Francisco, CA</p></div>
-                                    <div class="shows__ticket-info"><button>Buy Ticket</button></div>
-                                </div>
-  
+                                    <div class="shows__ticket-info-wrapper-inner">
+                                        <div class="shows__ticket-info">
+                                            <p class="shows__table-header shows__table-header--mobile">Date</p>
+                                            <p class="bold">Mon Sept 09 2024</p>
+                                        </div>
+
+                                        <div class="shows__ticket-info">
+                                            <p class="shows__table-header shows__table-header--mobile">Venue</p>
+                                            <p>Ronald Lane</p>
+                                        </div>
+
+                                        <div class="shows__ticket-info">
+                                            <p class="shows__table-header shows__table-header--mobile">Location</p>
+                                            <p>San Francisco, CA</p>
+                                        </div>
+
+                                        <div class="shows__ticket-info">
+                                            <button>Buy Ticket</button>
+                                        </div>
+                                    </div>
+                                </div>  
                             </div>
                     </div>
                 </div>

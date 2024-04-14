@@ -38,6 +38,10 @@ body {
     }
 }
 
+.bold{
+    font-weight: 600;
+}
+
 h1{
     @include mobile-page-header;
 
@@ -162,6 +166,29 @@ a{
 
 a:active{
     color: $link-active;
+}
+
+button{
+    height: 2.5rem;
+    width: 100%;
+    background: $button-default;
+    border-radius: 0.25rem;
+    color: $text-primary-on-dark;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include mobile-button;
+
+    @include desktop{
+        @include desktop-button;
+        min-width: 9.375rem;
+        width: auto;
+        padding: 0 $spacing-32;
+    }
+
+    &:hover{
+        background: $bandsite-darkblack;
+    }
 }
 
 // .section-container{

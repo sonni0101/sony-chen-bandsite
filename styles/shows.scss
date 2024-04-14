@@ -2,15 +2,21 @@
 @import "./partials/variables.scss";
 @import "./global.scss";
 
+// .divider{
+//     border-bottom: 1px solid $divider;
+//     width: 100%;
+// }
+
 .hero{
     display: flex;
     position: relative;
-    height: 11.625rem; 
+    height: 100%; 
     width: 100vw;
 
     &::before {
         background-image: url("../assets/images/hero-shows.jpg");
         @include background-image;
+        height: 100%; 
 
         @include desktop{
             height: 39.25rem; 
@@ -18,36 +24,39 @@
         }
     
         @include tablet{
-            height: 40vh; 
+            height: 100%; 
             width: 100vw;
         }
     }
 
     @include desktop{
         height: 39.25rem; 
-        width: 100vw;
+        width: 100%;
     }
 
     @include tablet{
-        height: 40vh; 
+        height: 100%; 
         width: 100vw;
     }
 
     &__section-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         margin: auto;
         width: 100%;
         z-index: 1;
+        padding: $spacing-32 $spacing-16;
     
         @include desktop{
             max-width: $desktop-total-width;
             gap: $spacing-48;
+            display: flex;
+            flex-direction: row;
         }
 
         @include tablet{
-            padding: 0 $tablet-spacing-36;
+            padding: $spacing-96 $tablet-spacing-36;
         }
     }
 
@@ -57,6 +66,7 @@
         &--page-header{
             color: $text-primary-on-dark;
             display: flex;
+            padding-bottom: $spacing-16;
     
             @include desktop{
                 display: flex;
@@ -67,6 +77,7 @@
         &--subtitle{
             @include mobile-subheader;
             color: $primary-whilte;
+            padding-bottom: $spacing-20;
 
             @include desktop{
                 @include desktop-subheader;
@@ -97,14 +108,10 @@
     &__section-container{
         display: flex;
         flex-direction: column;
-        gap: $mobile-spacing-16;
         width: 100%;
 
         @include desktop{
             max-width: $desktop-total-width;
-            // display: flex;
-            // flex-direction: row;
-            // gap: $desktop-spacing-36;
         }
 
         @include tablet{
@@ -114,11 +121,26 @@
     }
 
     &__wrapper{
-        
+    
         @include desktop{
             display: flex;
             flex-direction: row;
             gap: $spacing-124;
+        }
+    }
+
+    &__heading{
+        margin: 0 $spacing-16;
+
+        @include desktop{
+            margin: 0;
+        }
+
+        @include tablet{
+            margin: 0;
+            padding-bottom: $spacing-28;
+            padding-left: $spacing-18;
+            padding-right: $spacing-18;
         }
     }
 
@@ -128,23 +150,78 @@
 
     &__table-headers-wrapper{
         text-align: left;
-        padding: $spacing-24;
         display: flex;
         flex-direction: row;
+
+        @include desktop{
+            padding: $spacing-24 $spacing-18;
+        }
+
+        @include tablet{
+            padding: $spacing-8 $spacing-18;
+        }
     }
 
     &__table-header{
         width: 100%;
+        display: none;
+        @include mobile-label-uppercase;
+        color: $text-secondary;
+
+        @include desktop{
+            display: block;
+            @include desktop-label-uppercase;
+        }
+
+        @include tablet{
+            display: block;
+            @include tablet-label-uppercase;
+        }
+
+        &--mobile{
+            display: block;
+
+            @include desktop{
+                display: none;
+            }  
+
+            @include tablet{
+                display: none;
+            }  
+        }
     }
 
     &__ticket-info-wrapper{
         text-align: left;
-        padding: $spacing-16 $spacing-24;
+        border-bottom: 1px solid $divider;
+    }
+
+    &__ticket-info-wrapper-inner{
+        margin: 16px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        gap: $spacing-16;
+
+        @include desktop{
+            padding: $spacing-24 $spacing-18;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            gap: 0;
+        }
+
+        @include tablet{
+            padding: $spacing-24 $spacing-18;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+        }
     }
 
     &__ticket-info{
         width: 100%;
+        gap: $spacing-8;
     }
 }

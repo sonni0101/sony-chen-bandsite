@@ -57,6 +57,14 @@
     margin: 0;
 }
 
+@mixin mobile-label-uppercase{
+    font-weight: 600;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 // desktop
 @mixin desktop-page-header{
     font-weight: 700;
@@ -105,6 +113,14 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 0;
+}
+
+@mixin desktop-label-uppercase{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 // tablet
@@ -157,6 +173,14 @@
     margin: 0;
 }
 
+@mixin tablet-label-uppercase{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 //breakpoints
 @mixin desktop{
     @media screen and (min-width: $desktop-breakpoint) {
@@ -198,7 +222,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 11.625rem; 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
