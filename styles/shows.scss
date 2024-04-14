@@ -39,13 +39,11 @@
         justify-content: space-between;
         margin: auto;
         width: 100%;
-        padding: 0 $spacing-16;
         z-index: 1;
     
-
         @include desktop{
             max-width: $desktop-total-width;
-            gap: $spacing-64;
+            gap: $spacing-48;
         }
 
         @include tablet{
@@ -54,6 +52,7 @@
     }
 
     &__music-content{
+        flex: 4;
 
         &--page-header{
             color: $text-primary-on-dark;
@@ -64,9 +63,88 @@
                 align-items: center;        
             }
         }
+
+        &--subtitle{
+            @include mobile-subheader;
+            color: $primary-whilte;
+
+            @include desktop{
+                @include desktop-subheader;
+            }
+
+            @include tablet{
+                @include tablet-subheader;
+            }
+        }
     }
 
     &__soundsCloud{
-        flex: 1;
+        flex: 3;
+    }
+}
+
+.shows{
+    @include mobile-section-container;
+
+    @include desktop{
+        @include desktop-section-container;
+    }
+
+    @include tablet{
+        @include tablet-section-container;
+    }
+
+    &__section-container{
+        display: flex;
+        flex-direction: column;
+        gap: $mobile-spacing-16;
+        width: 100%;
+
+        @include desktop{
+            max-width: $desktop-total-width;
+            // display: flex;
+            // flex-direction: row;
+            // gap: $desktop-spacing-36;
+        }
+
+        @include tablet{
+            gap: $tablet-spacing-36;
+            padding: 0 $tablet-spacing-36;
+        }
+    }
+
+    &__wrapper{
+        
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: $spacing-124;
+        }
+    }
+
+    &__table{
+        width: 100%;
+    }
+
+    &__table-headers-wrapper{
+        text-align: left;
+        padding: $spacing-24;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__table-header{
+        width: 100%;
+    }
+
+    &__ticket-info-wrapper{
+        text-align: left;
+        padding: $spacing-16 $spacing-24;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__ticket-info{
+        width: 100%;
     }
 }
