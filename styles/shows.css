@@ -256,11 +256,9 @@ a {
     font-weight: 400;
   }
 }
-
-a:active {
+a:hover {
   color: #ffffff;
 }
-
 a:active {
   color: #ffffff;
 }
@@ -347,7 +345,6 @@ button:hover {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -525,14 +522,12 @@ button:hover {
 .footer__logo {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
 .footer__logo--top {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
   display: none;
@@ -550,7 +545,6 @@ button:hover {
 .footer__logo--bottom {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -688,6 +682,7 @@ button:hover {
 }
 .hero__music-content {
   flex: 4;
+  padding-right: 4.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__music-content {
@@ -738,11 +733,6 @@ button:hover {
 .hero__soundsCloud {
   flex: 3;
   width: 100%;
-}
-@media screen and (min-width: 1280px) {
-  .hero__soundsCloud {
-    padding-left: 3.5rem;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__soundsCloud {
@@ -831,16 +821,27 @@ button:hover {
 .shows__table-header {
   width: 100%;
   display: none;
-  font-weight: 600;
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  margin: 0;
-  text-transform: uppercase;
   color: #afafaf;
 }
 @media screen and (min-width: 1280px) {
   .shows__table-header {
     display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__table-header {
+    display: block;
+  }
+}
+.shows__table-header--label {
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1280px) {
+  .shows__table-header--label {
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;
@@ -849,8 +850,7 @@ button:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .shows__table-header {
-    display: block;
+  .shows__table-header--label {
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;

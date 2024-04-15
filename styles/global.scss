@@ -175,14 +175,14 @@ a{
         line-height: 1.25rem;   
         font-weight: 400;
         }
-}
 
-a:active{
-    color: $link-hover;
-}
+    &:hover{
+        color: $link-hover;
+    }
 
-a:active{
-    color: $link-active;
+    &:active{
+        color: $link-active;
+    }
 }
 
 button{

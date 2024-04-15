@@ -256,11 +256,9 @@ a {
     font-weight: 400;
   }
 }
-
-a:active {
+a:hover {
   color: #ffffff;
 }
-
 a:active {
   color: #ffffff;
 }
@@ -347,7 +345,6 @@ button:hover {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -525,14 +522,12 @@ button:hover {
 .footer__logo {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }
 .footer__logo--top {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
   display: none;
@@ -550,7 +545,6 @@ button:hover {
 .footer__logo--bottom {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 400;
 }

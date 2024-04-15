@@ -58,6 +58,7 @@
 
     &__music-content{
         flex: 4;
+        padding-right: $spacing-72;
 
         @include tablet{
             padding-bottom: $spacing-56;
@@ -97,10 +98,6 @@
     &__soundsCloud{
         flex: 3;
         width: 100%;
-
-        @include desktop{
-            padding-left: $spacing-56;
-        }
 
         @include tablet{
             width: 70%;
@@ -179,17 +176,27 @@
     &__table-header{
         width: 100%;
         display: none;
-        @include mobile-label-uppercase;
         color: $text-secondary;
 
         @include desktop{
             display: block;
-            @include desktop-label-uppercase;
         }
 
         @include tablet{
             display: block;
-            @include tablet-label-uppercase;
+        }
+
+        &--label{
+            @include mobile-label-uppercase;
+
+            @include desktop{
+                @include desktop-label-uppercase;;
+            }
+    
+            @include tablet{
+                @include tablet-label-uppercase;
+            }
+
         }
 
         &--mobile{
