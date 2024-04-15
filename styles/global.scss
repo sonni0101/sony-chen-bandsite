@@ -178,6 +178,10 @@ a{
 }
 
 a:active{
+    color: $link-hover;
+}
+
+a:active{
     color: $link-active;
 }
 
@@ -270,10 +274,6 @@ button{
         @include tablet{
             gap: $spacing-8;
         }
-
-        & a:active{
-            font-weight: 700; 
-        }
     }
 
     &__link-item{
@@ -304,10 +304,27 @@ button{
             display: block;
             padding: $spacing-24;
             box-sizing: border-box;
+            color: $link-default;
 
             @include desktop{
                 padding: $spacing-24 $spacing-16;
                 margin: 0 $spacing-16;
+            }
+
+            &:hover{
+                width: 100%;
+                border-bottom: solid 4px white;
+                padding: $spacing-16;
+                display: block;
+                padding: $spacing-24;
+                font-weight: 400; 
+                box-sizing: border-box;
+                color: $link-hover;
+    
+                @include desktop{
+                    padding: $spacing-24 $spacing-16;
+                    margin: 0 $spacing-16;
+                }
             }
         }
     }
