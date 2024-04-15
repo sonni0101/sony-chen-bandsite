@@ -10,10 +10,17 @@ const createComment = (event) =>{
 
     const commentMainDiv = document.createElement("div");
     commentMainDiv.classList.add("comment-area__default-comment");
-
+    
+    // image
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("comment-area__profile-image-container");
     commentMainDiv.append(imageDiv);
+
+    // profile image
+    const profileImage = document.createElement("img");
+    profileImage.classList.add("comment-area__profile-image");
+    profileImage.src = "./assets/images/Mohan-muruge.jpg";
+    imageDiv.append(profileImage);
 
     const commentWrapperDiv = document.createElement("div");
     commentWrapperDiv.classList.add("comment-area__default-comment-wrapper");
