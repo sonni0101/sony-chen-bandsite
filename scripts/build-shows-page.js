@@ -69,3 +69,17 @@ for (let i = 0; i < showDetails.length; i++){
     createWrapperDiv.append(postLocationDiv);
     createWrapperDiv.append(postButtonDiv);
 }
+
+const ticketSections = document.querySelectorAll('.shows__ticket-info-wrapper-inner');
+let selectedTicket = null;
+
+ticketSections.forEach(ticketSection => {
+    ticketSection.addEventListener('click', () => {
+        if (selectedTicket !== null) {
+            selectedTicket.classList.remove('shows__ticket-info-wrapper-inner--active'); 
+        }
+        ticketSection.classList.add('shows__ticket-info-wrapper-inner--active'); 
+        selectedTicket = ticketSection; 
+    });
+});
+

@@ -1,5 +1,10 @@
 const showDetails = [
     {
+        date: "Tue Sept 09 2024",
+        venue: "Ronald Lane",
+        location: "San Francisco, CA",
+    },
+    {
         date: "Tue Sept 17 2024",
         venue: "Pier 3 East",
         location: "San Francisco, CA",
