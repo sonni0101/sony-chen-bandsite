@@ -43,6 +43,7 @@ const createComment = (event) =>{
 
     commentMainDivOuter.prepend(commentMainDiv);
 
+
     // push the comment into the defaultComment array
     const newComment = {
         name: nameValue,
@@ -64,6 +65,7 @@ const createComment = (event) =>{
 
 } else {
     alert("Error: your input shouldn't be empty!");
+    event.preventDefault();
 
     // show error foreach
     document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {

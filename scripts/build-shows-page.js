@@ -73,6 +73,7 @@ for (let i = 0; i < showDetails.length; i++){
 const ticketSections = document.querySelectorAll('.shows__ticket-info-wrapper-inner');
 let selectedTicket = null;
 
+// when onclick shows the active state
 ticketSections.forEach(ticketSection => {
     ticketSection.addEventListener('click', () => {
         if (selectedTicket !== null) {
