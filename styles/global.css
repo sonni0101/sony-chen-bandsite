@@ -34,6 +34,10 @@ body {
   }
 }
 
+.bold {
+  font-weight: 600;
+}
+
 h1 {
   font-weight: 700;
   font-size: 1.5rem;
@@ -158,6 +162,33 @@ p {
   color: #323232;
 }
 
+.label {
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+@media screen and (min-width: 1280px) {
+  .label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
 .footer-copy {
   font-weight: 400;
   font-size: 0.8125rem;
@@ -197,7 +228,7 @@ p {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .labe-copy {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 0;
@@ -205,7 +236,7 @@ p {
 }
 
 a {
-  color: #afafaf;
+  color: #e1e1e1;
   text-decoration: none;
   font-weight: 400;
   font-size: 0.8125rem;
@@ -230,8 +261,44 @@ a:active {
   color: #ffffff;
 }
 
-.section-container {
-  min-width: 63.75rem;
+button {
+  height: 2.5rem;
+  width: 100%;
+  background: #323232;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  button {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    min-width: 9.375rem;
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  button {
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    min-width: 9.375rem;
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+button:hover {
+  background: #000000;
 }
 
 .secondary-text {
@@ -243,7 +310,7 @@ a:active {
   background-color: #323232;
   justify-content: center;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   width: 100%;
   top: 0;
 }
@@ -284,7 +351,7 @@ a:active {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  color: #afafaf;
+  color: #e1e1e1;
   margin: 0;
   padding: 0;
 }
@@ -303,25 +370,36 @@ a:active {
   font-weight: 700;
 }
 .nav__link-item {
-  color: #afafaf;
+  color: #e1e1e1;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
 }
 .nav__link-item--active {
   width: 100%;
+  border-bottom: solid 4px white;
+  padding: 1rem;
+  display: block;
+  padding: 1.5rem;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1280px) {
+  .nav__link-item--active {
+    padding: 1.5rem 1rem;
+    margin: 0 1rem;
+  }
+}
+.nav__link-item--default {
+  width: 100%;
   border-bottom: solid 4px transparent;
   padding: 1rem;
   display: block;
   padding: 1.5rem;
-}
-.nav__link-item--active:active {
-  border-bottom: 4px solid white;
   box-sizing: border-box;
-  font-weight: 700;
 }
 @media screen and (min-width: 1280px) {
-  .nav__link-item--active {
+  .nav__link-item--default {
     padding: 1.5rem 1rem;
     margin: 0 1rem;
   }

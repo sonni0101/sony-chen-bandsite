@@ -44,8 +44,8 @@
 }
 
 @mixin mobile-button{
-    font-weight: 700;
-    font-size: 0.625rem;
+    font-weight: 600;
+    font-size: 0.8125rem;
     line-height: 1.25rem;
     margin: 0;
 }
@@ -55,6 +55,14 @@
     font-size: 0.625rem;
     line-height: 1.25rem;
     margin: 0;
+}
+
+@mixin mobile-label-uppercase{
+    font-weight: 600;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 // desktop
@@ -94,8 +102,8 @@
 }
 
 @mixin desktop-button{
-    font-weight: 700;
-    font-size: 0.625rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
 }
@@ -105,6 +113,14 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 0;
+}
+
+@mixin desktop-label-uppercase{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 // tablet
@@ -145,16 +161,24 @@
 
 @mixin tablet-button{
     font-weight: 700;
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
 }
 
 @mixin tablet-label{
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 0;
+}
+
+@mixin tablet-label-uppercase{
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 //breakpoints
@@ -191,6 +215,19 @@
     padding-bottom: $tablet-spacing-36;
     gap: $tablet-spacing-36;
 }
+
+@mixin background-image{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
 
 
 

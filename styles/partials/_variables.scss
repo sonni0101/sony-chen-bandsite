@@ -5,26 +5,35 @@ $primary-whilte: #ffffff;
 $secondary-bandsite-dark-black: #323232;
 $secondary-mercury: #e1e1e1;
 $secondary-alabaster: #fafafa;
+$bandsite-darkblack: #000000;
 
 // color tokens
 $text-primary-on-light: $primary-bandsite-black;
 $text-primary-on-dark: $primary-whilte;
 $text-secondary: $primary-silver;
+$background-light-alt: $secondary-alabaster;
 $background-dark: $primary-bandsite-black;
-$button-default: $primary-silver;
-$button-hover: $secondary-bandsite-dark-black;
+$background-image: $secondary-mercury;
+$button-default: $secondary-bandsite-dark-black;
+$button-hover: $bandsite-darkblack;
 $button-active: $primary-whilte;
-$link-default: $primary-silver;
+$link-default: $secondary-mercury;
 $link-active: $primary-whilte;
 $divider: $secondary-mercury;
-$background-light-alt: $secondary-alabaster;
+$input-default: $secondary-mercury;
+$input-active: $primary-bandsite-black;
+$input-error: #d22d2d;
 
 // spacing tokens
 $spacing-0: 0rem; 
 $spacing-4: 0.25rem;
 $spacing-8: 0.5rem;
+$spacing-12: 0.75rem;
 $spacing-16: 1rem; 
+$spacing-18: 1.125rem; 
+$spacing-20: 1.25rem; 
 $spacing-24: 1.5rem;
+$spacing-28: 1.75rem;
 $spacing-32: 2rem;
 $spacing-40: 2.5rem;
 $spacing-48: 3rem;
@@ -32,6 +41,7 @@ $spacing-56: 3.5rem;
 $spacing-64: 4rem;
 $spacing-80: 5rem;
 $spacing-96: 6rem;
+$spacing-124: 7.75rem;
 $desktop-spacing-36: 2.25rem;
 $desktop-spacing-48: $spacing-48;
 $tablet-spacing-36: 2.25rem;
@@ -51,4 +61,6 @@ $desktop-column-width: 3.9375rem;
 $desktop-gutter-width: 1.5rem;
 $desktop-column-count: 12;
 
-$desktop-total-width: ($desktop-column-width * 12)+ ($desktop-gutter-width * 11)
+$desktop-total-width: ($desktop-column-width * 12)+ ($desktop-gutter-width * 11);
+$desktop-total-width-form: ($desktop-column-width * 6)+ ($desktop-gutter-width * 5);
+

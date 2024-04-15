@@ -38,6 +38,10 @@ body {
     }
 }
 
+.bold{
+    font-weight: 600;
+}
+
 h1{
     @include mobile-page-header;
 
@@ -116,6 +120,19 @@ p{
     color: $text-primary-on-light;
 }
 
+.label{
+    @include mobile-label-uppercase;
+    color: $text-secondary;
+
+    @include desktop{
+        @include desktop-label-uppercase;
+    }
+
+    @include tablet{
+        @include desktop-label-uppercase;
+    }
+}
+
 .footer-copy{
     @include mobile-footer-copy;
 
@@ -164,8 +181,34 @@ a:active{
     color: $link-active;
 }
 
-.section-container{
-    min-width: $desktop-total-width;
+button{
+    height: 2.5rem;
+    width: 100%;
+    background: $button-default;
+    border-radius: 0.25rem;
+    color: $text-primary-on-dark;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include mobile-button;
+
+    @include desktop{
+        @include desktop-button;
+        min-width: 9.375rem;
+        width: auto;
+        padding: 0 $spacing-32;
+    }
+
+    @include tablet{
+        @include tablet-button;
+        min-width: 9.375rem;
+        width: auto;
+        padding: 0 $spacing-32;
+    }
+
+    &:hover{
+        background: $bandsite-darkblack;
+    }
 }
 
 .secondary-text{
@@ -177,7 +220,7 @@ a:active{
     background-color: $background-dark;
     justify-content: center;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     top: 0;
 
@@ -241,17 +284,26 @@ a:active{
 
         &--active{
             width: 100%;
+            border-bottom: solid 4px white;
+            padding: $spacing-16;
+            display: block;
+            padding: $spacing-24;
+            font-weight: 700; 
+            box-sizing: border-box;
+
+            @include desktop{
+                padding: $spacing-24 $spacing-16;
+                margin: 0 $spacing-16;
+            }
+        }
+
+        &--default{
+            width: 100%;
             border-bottom: solid 4px transparent;
             padding: $spacing-16;
             display: block;
             padding: $spacing-24;
-
-
-            &:active{
-                border-bottom: 4px solid white;
-                box-sizing: border-box;
-                font-weight: 700; 
-            }
+            box-sizing: border-box;
 
             @include desktop{
                 padding: $spacing-24 $spacing-16;
