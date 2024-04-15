@@ -48,13 +48,13 @@ const createComment = (event) =>{
 
     // reset border color 
     document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
-        inputElem.style.borderColor = ""; 
+        inputElem.classList.remove("comment-area__form-input--error");
     });
 
 } else {
     alert("Error: your input shouldn't be empty!");
     document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
-        inputElem.style.borderColor = "#d22d2d";
+        inputElem.classList.add("comment-area__form-input--error");
     });
     
 }
