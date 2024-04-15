@@ -162,6 +162,33 @@ p {
   color: #323232;
 }
 
+.label {
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+@media screen and (min-width: 1280px) {
+  .label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
 .footer-copy {
   font-weight: 400;
   font-size: 0.8125rem;
@@ -261,7 +288,7 @@ button {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   button {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;

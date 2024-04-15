@@ -1010,18 +1010,21 @@ button:hover {
     gap: 1.5rem;
   }
 }
+.comment-area__default-comment-container {
+  border-top: 1px solid #e1e1e1;
+}
 .comment-area__default-comment {
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
   padding: 1.5rem 0;
-  border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
 }
 .comment-area__default-comment-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
 }
 .comment-area__default-comment-header {
   display: flex;
@@ -1090,6 +1093,9 @@ button:hover {
   .comment-area__form-input--width {
     height: 3rem;
   }
+}
+.comment-area__form-input--error {
+  border-color: #d22d2d;
 }
 .comment-area__form-input:focus {
   border-color: #323232;

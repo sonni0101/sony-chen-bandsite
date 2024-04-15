@@ -69,7 +69,7 @@
                     <h2>Join the Conversation</h2>
                     <div class="comment-area__content">
                         <div class="comment-area__content-section-container">
-                            <form class="comment-area__form">
+                            <div class="comment-area__form">
                                 <div class="comment-area__profile-image-container"><img class="comment-area__profile-image" src="./assets/images/Mohan-muruge.jpg"/> </div>
                                 
                                 <div class="comment-area__form-name">
@@ -83,20 +83,22 @@
                                         <textarea class="comment-area__form-input" rows="4" cols="50" id="comment"></textarea>
                                     </label>
         
-                                    <button>Comment</button>
+                                    <button id="submit">Comment</button>
                                 </div>
-                            </form>
+                            </div>
 
-                            <div class="comment-area__default-comment">
-                                <div class="comment-area__profile-image-container"></div>  
-                                <div class = "comment-area__default-comment-wrapper">
-                                    <div class = "comment-area__default-comment-header">
-                                        <p class="comment-area__default-comment-name bold">Victor Pinto</p>
-                                        <p class="comment-area__default-comment-date">11/02/2023</p>
+                            <div class="comment-area__default-comment-container">
+                                <div class="comment-area__default-comment">
+                                    <div class="comment-area__profile-image-container"></div>  
+                                    <div class = "comment-area__default-comment-wrapper">
+                                        <div class = "comment-area__default-comment-header">
+                                            <p class="comment-area__default-comment-name bold">Victor Pinto</p>
+                                            <p class="comment-area__default-comment-date">11/02/2023</p>
+                                        </div>
+                                        <p class="comment-area__default-comment-message">
+                                            This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
+                                        </p>
                                     </div>
-                                    <p class="comment-area__default-comment-message">
-                                        This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -148,5 +150,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="./scripts/index-page.js"></script>
     </body>
 </html>
