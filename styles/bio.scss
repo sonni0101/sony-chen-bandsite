@@ -247,3 +247,203 @@
     }
 }
 
+.comment-area{
+    @include mobile-section-container;
+
+    @include desktop{
+        @include desktop-section-container;
+    }
+
+    @include tablet{
+        @include tablet-section-container;
+    }
+
+    &__section-container{
+        display: flex;
+        flex-direction: column;
+        gap: $mobile-spacing-16;
+        padding: 0 $spacing-16;
+        width: 100%;
+
+        @include desktop{
+            max-width: $desktop-total-width;
+            display: flex;
+            flex-direction: column;
+            gap: $desktop-spacing-36;    
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: $tablet-spacing-36; 
+            padding: 0 $tablet-spacing-36;   
+        }
+    }
+
+    &__profile-image-container{
+        min-width: 2.25rem;
+        max-width: 2.25rem;
+        height: 2.25rem;
+        overflow: hidden;
+        border-radius: 50%;
+        background: $background-image;
+
+        @include desktop{
+            min-width: 3rem;
+            max-width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__content{
+
+        @include desktop{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__content-section-container{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+
+        @include desktop{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-24; 
+            max-width: $desktop-total-width-form;
+
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-24; 
+            padding: 0 $spacing-64;
+        }
+    }
+
+    &__form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-16;
+
+        @include desktop{
+            gap: $spacing-12;
+        }
+
+        @include tablet{
+            gap: $spacing-12;
+        }
+    }
+
+    &__profile-image{
+        max-height: 100%;  
+    }
+
+    &__form-label{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-8;
+    }
+
+    &__form-name{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-16;
+        width: 100%;
+
+        @include desktop{
+            align-items: flex-end;
+            gap: $spacing-24;
+        }
+
+        @include tablet{
+            align-items: flex-end;
+            gap: $spacing-24;
+        }
+    }
+
+    &__default-comment{
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-12;
+        padding: $spacing-24 0;
+        border-top: 1px solid $divider;
+        border-bottom: 1px solid $divider;
+    }
+
+    &__default-comment-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-12;
+
+    }
+
+    &__default-comment-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__default-comment-date{
+        font-weight: 400;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        margin: 0;
+        color: $text-secondary;
+
+        @include desktop{
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin: 0;
+        }
+
+        @include tablet{
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            margin: 0;
+        }
+    }
+
+    &__form-label{
+        width: 100%;
+    }
+
+    &__form-input{
+        border-radius: 0.25rem;
+        padding: $spacing-12;
+        border: 1px solid $input-default;
+        outline: none;
+        box-sizing: border-box;
+        @include mobile-body-copy;
+        font-family: "Avenir Next LT Pro";
+        width: 100%;
+
+        @include desktop{
+            padding: $spacing-16;
+            @include desktop-body-copy;
+        }
+
+        @include tablet{
+            padding: $spacing-16;
+            @include tablet-body-copy;
+        }
+
+        &--width{
+            height: 2.25rem;
+
+            @include desktop{
+                height: 3rem;
+            }
+        }
+
+        &:focus{
+            border-color: $input-active;
+        }
+    }
+
+}

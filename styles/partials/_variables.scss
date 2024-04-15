@@ -13,12 +13,16 @@ $text-primary-on-dark: $primary-whilte;
 $text-secondary: $primary-silver;
 $background-light-alt: $secondary-alabaster;
 $background-dark: $primary-bandsite-black;
+$background-image: $secondary-mercury;
 $button-default: $secondary-bandsite-dark-black;
 $button-hover: $bandsite-darkblack;
 $button-active: $primary-whilte;
 $link-default: $secondary-mercury;
 $link-active: $primary-whilte;
 $divider: $secondary-mercury;
+$input-default: $secondary-mercury;
+$input-active: $primary-bandsite-black;
+$input-error: #d22d2d;
 
 // spacing tokens
 $spacing-0: 0rem; 
@@ -57,4 +61,6 @@ $desktop-column-width: 3.9375rem;
 $desktop-gutter-width: 1.5rem;
 $desktop-column-count: 12;
 
-$desktop-total-width: ($desktop-column-width * 12)+ ($desktop-gutter-width * 11)
+$desktop-total-width: ($desktop-column-width * 12)+ ($desktop-gutter-width * 11);
+$desktop-total-width-form: ($desktop-column-width * 6)+ ($desktop-gutter-width * 5);
+

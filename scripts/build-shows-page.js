@@ -30,6 +30,7 @@ const showListDiv = document.querySelector(".shows__table");
 
 for (let i = 0; i < showDetails.length; i++){
 
+    //create all the needed div for the show list
     showListDivOuter = document.createElement("div");
     showListDivOuter.classList.add("shows__ticket-info-wrapper");
 
@@ -88,6 +89,7 @@ for (let i = 0; i < showDetails.length; i++){
     createButton.classList.add("button");
     postButtonDiv.append(createButton);
 
+    //append div to the main wrapper div
     showListDiv.append(createWrapperDiv);
     showListDiv.append(showListDivOuter);
     createWrapperDiv.append(postDateDiv);

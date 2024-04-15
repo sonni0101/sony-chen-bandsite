@@ -44,8 +44,8 @@
 }
 
 @mixin mobile-button{
-    font-weight: 700;
-    font-size: 0.625rem;
+    font-weight: 600;
+    font-size: 0.8125rem;
     line-height: 1.25rem;
     margin: 0;
 }
@@ -102,8 +102,8 @@
 }
 
 @mixin desktop-button{
-    font-weight: 700;
-    font-size: 0.625rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
 }
@@ -161,13 +161,13 @@
 
 @mixin tablet-button{
     font-weight: 700;
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
 }
 
 @mixin tablet-label{
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.25rem;
     margin: 0;

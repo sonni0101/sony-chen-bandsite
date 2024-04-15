@@ -120,6 +120,19 @@ p{
     color: $text-primary-on-light;
 }
 
+.label{
+    @include mobile-label-uppercase;
+    color: $text-secondary;
+
+    @include desktop{
+        @include desktop-label-uppercase;
+    }
+
+    @include tablet{
+        @include desktop-label-uppercase;
+    }
+}
+
 .footer-copy{
     @include mobile-footer-copy;
 
@@ -186,14 +199,17 @@ button{
         padding: 0 $spacing-32;
     }
 
+    @include tablet{
+        @include tablet-button;
+        min-width: 9.375rem;
+        width: auto;
+        padding: 0 $spacing-32;
+    }
+
     &:hover{
         background: $bandsite-darkblack;
     }
 }
-
-// .section-container{
-//     min-width: $desktop-total-width;
-// }
 
 .secondary-text{
     color: $text-primary-on-dark;
