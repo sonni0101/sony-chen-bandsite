@@ -657,18 +657,24 @@ button:hover {
 @media screen and (min-width: 1280px) {
   .hero__section-container {
     max-width: 63.75rem;
-    gap: 3rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__section-container {
-    padding: 6rem 2.25rem;
+    padding: 6rem 12.25rem 6rem 2.25rem;
   }
 }
 .hero__music-content {
   flex: 4;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__music-content {
+    padding-bottom: 3.5rem;
+  }
 }
 .hero__music-content--page-header {
   color: #ffffff;
@@ -679,6 +685,12 @@ button:hover {
   .hero__music-content--page-header {
     display: flex;
     align-items: center;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__music-content--page-header {
+    padding: 0;
   }
 }
 .hero__music-content--subtitle {
@@ -707,6 +719,17 @@ button:hover {
 }
 .hero__soundsCloud {
   flex: 3;
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .hero__soundsCloud {
+    padding-left: 3.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__soundsCloud {
+    width: 70%;
+  }
 }
 
 .shows {
@@ -858,6 +881,9 @@ button:hover {
     align-items: center;
     margin: 0;
   }
+}
+.shows__ticket-info-wrapper-inner:hover {
+  background: #fafafa;
 }
 .shows__ticket-info {
   width: 100%;

@@ -704,6 +704,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -828,6 +829,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -915,6 +917,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -1093,9 +1096,6 @@ button:hover {
   .comment-area__form-input--width {
     height: 3rem;
   }
-}
-.comment-area__form-input--error {
-  border-color: #d22d2d;
 }
 .comment-area__form-input:focus {
   border-color: #323232;

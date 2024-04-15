@@ -1,15 +1,12 @@
-// const button = document.getElementById("submit");
-// const commentMainDivOuter = document.querySelector(".comment-area__default-comment-container");
 const button = document.getElementById("submit");
-
 
 const createComment = (event) =>{
     const commentMainDivOuter = document.querySelector(".comment-area__default-comment-container");
-    const name = document.getElementById("name").value;
-    const comment = document.getElementById("comment").value;
-    const inputElem = document.querySelectorAll(".comment-area__form-input");
+    const nameValue = document.getElementById("name").value;
+    const commentValue = document.getElementById("comment").value;
+
     
-    if (name, comment){
+    if (nameValue && commentValue){
     event.preventDefault();
 
     const commentMainDiv = document.createElement("div");
@@ -28,12 +25,12 @@ const createComment = (event) =>{
     commentWrapperDiv.append(commentHeaderDiv);
 
     const commentElem = document.createElement("p");
-    commentElem.innerHTML = comment;
+    commentElem.innerHTML = commentValue;
     commentElem.classList.add("comment-area__default-comment-message");
     commentWrapperDiv.append(commentElem);
 
     const commentName = document.createElement("p");
-    commentName.innerHTML = name;
+    commentName.innerHTML = nameValue;
     commentName.classList.add("comment-area__default-comment-name", "bold");
     commentHeaderDiv.append(commentName);
 
@@ -44,9 +41,22 @@ const createComment = (event) =>{
     commentHeaderDiv.append(commentDate);
 
     commentMainDivOuter.prepend(commentMainDiv);
+    
+    // clear the form
+    document.getElementById("name").value = '';
+    document.getElementById("comment").value = '';
+
+    // reset border color 
+    document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
+        inputElem.style.borderColor = ""; 
+    });
+
 } else {
     alert("Error: your input shouldn't be empty!");
-    inputElem.style.borderColor = "blue";
+    document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
+        inputElem.style.borderColor = "#d22d2d";
+    });
+    
 }
 };
 

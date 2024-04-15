@@ -83,6 +83,7 @@
             display: flex;
             flex-direction: column;
             gap: $desktop-spacing-36;
+            padding: 0;
         }
 
         @include tablet{
@@ -194,7 +195,8 @@
             max-width: $desktop-total-width;
             display: flex;
             flex-direction: column;
-            gap: $desktop-spacing-36;    
+            gap: $desktop-spacing-36;   
+            padding: 0; 
         }
 
         @include tablet{
@@ -269,7 +271,9 @@
             max-width: $desktop-total-width;
             display: flex;
             flex-direction: column;
-            gap: $desktop-spacing-36;    
+            gap: $desktop-spacing-36; 
+            padding: 0;
+   
         }
 
         @include tablet{
@@ -442,10 +446,6 @@
             @include desktop{
                 height: 3rem;
             }
-        }
-
-        &--error{
-            border-color: $input-error;
         }
 
         &:focus{
