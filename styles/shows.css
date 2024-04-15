@@ -261,6 +261,10 @@ a:active {
   color: #ffffff;
 }
 
+a:active {
+  color: #ffffff;
+}
+
 button {
   height: 2.5rem;
   width: 100%;
@@ -366,9 +370,6 @@ button:hover {
     gap: 0.5rem;
   }
 }
-.nav__link a:active {
-  font-weight: 700;
-}
 .nav__link-item {
   color: #e1e1e1;
   text-align: center;
@@ -397,9 +398,26 @@ button:hover {
   display: block;
   padding: 1.5rem;
   box-sizing: border-box;
+  color: #e1e1e1;
 }
 @media screen and (min-width: 1280px) {
   .nav__link-item--default {
+    padding: 1.5rem 1rem;
+    margin: 0 1rem;
+  }
+}
+.nav__link-item--default:hover {
+  width: 100%;
+  border-bottom: solid 4px white;
+  padding: 1rem;
+  display: block;
+  padding: 1.5rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+@media screen and (min-width: 1280px) {
+  .nav__link-item--default:hover {
     padding: 1.5rem 1rem;
     margin: 0 1rem;
   }

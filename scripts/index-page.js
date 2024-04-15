@@ -56,8 +56,8 @@ const createComment = (event) =>{
     document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
         inputElem.classList.add("comment-area__form-input--error");
     });
-    
 }
 };
+
 
 button.addEventListener("click", createComment);
