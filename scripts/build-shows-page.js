@@ -14,12 +14,12 @@ for (let i = 0; i < showDetails.length; i++){
     postDateDiv.classList.add("shows__ticket-info");
 
     const postDateHeader = document.createElement("p");
-    postDateHeader.innerHTML = "Date";
+    postDateHeader.textContent = "Date";
     postDateHeader.classList.add("shows__table-header", "shows__table-header--mobile");
     postDateDiv.append(postDateHeader);
 
     const postDateContent = document.createElement("p");
-    postDateContent.innerHTML = showDetails[i].date;
+    postDateContent.textContent = showDetails[i].date;
     postDateContent.classList.add("shows__date", "bold");
     postDateDiv.append(postDateContent);
 
@@ -28,12 +28,12 @@ for (let i = 0; i < showDetails.length; i++){
     postVenueDiv.classList.add("shows__ticket-info");
 
     const postVenueHeader = document.createElement("p");
-    postVenueHeader.innerHTML = "Venue";
+    postVenueHeader.textContent = "Venue";
     postVenueHeader.classList.add("shows__table-header", "shows__table-header--mobile");
     postVenueDiv.append(postVenueHeader);
 
     const postVenueContent = document.createElement("p");
-    postVenueContent.innerHTML = showDetails[i].venue;
+    postVenueContent.textContent = showDetails[i].venue;
     postVenueContent.classList.add("shows__date");
     postVenueDiv.append(postVenueContent);
 
@@ -43,12 +43,12 @@ for (let i = 0; i < showDetails.length; i++){
     postLocationDiv.classList.add("shows__ticket-info");
 
     const postLocationHeader = document.createElement("p");
-    postLocationHeader.innerHTML = "Venue";
+    postLocationHeader.textContent = "Venue";
     postLocationHeader.classList.add("shows__table-header", "shows__table-header--mobile");
     postLocationDiv.append(postLocationHeader);
 
     const postLocationContent = document.createElement("p");
-    postLocationContent.innerHTML = showDetails[i].location;
+    postLocationContent.textContent = showDetails[i].location;
     postLocationContent.classList.add("shows__date");
     postLocationDiv.append(postLocationContent);
 
@@ -57,7 +57,7 @@ for (let i = 0; i < showDetails.length; i++){
     postButtonDiv.classList.add("shows__ticket-info");
     
     const createButton = document.createElement("button");
-    createButton.innerHTML = "Buy ticket";
+    createButton.textContent = "Buy ticket";
     createButton.classList.add("button");
     postButtonDiv.append(createButton);
 

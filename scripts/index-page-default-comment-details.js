@@ -19,19 +19,19 @@ for (let i = defaultComment.length - 1; i >= 0; i--){
 
     // name
     const commentName = document.createElement("p");
-    commentName.innerHTML = defaultComment[i].name;
+    commentName.textContent = defaultComment[i].name;
     commentName.classList.add("comment-area__default-comment-name", "bold");
     commentHeaderDiv.append(commentName);
 
     // date
     const commentDate = document.createElement("p");
-    commentDate.innerHTML = defaultComment[i].date;
+    commentDate.textContent = defaultComment[i].date;
     commentDate.classList.add("comment-area__default-comment-date");
     commentHeaderDiv.append(commentDate);
 
     // comment
     const commentElem = document.createElement("p");
-    commentElem.innerHTML = defaultComment[i].comment;
+    commentElem.textContent = defaultComment[i].comment;
     commentElem.classList.add("comment-area__default-comment-message");
     commentWrapperDiv.append(commentElem);
 

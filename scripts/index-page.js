@@ -4,7 +4,6 @@ const createComment = (event) =>{
     const commentMainDivOuter = document.querySelector(".comment-area__default-comment-container");
     const nameValue = document.getElementById("name").value;
     const commentValue = document.getElementById("comment").value;
-
     
     if (nameValue && commentValue){
     event.preventDefault();
@@ -24,23 +23,35 @@ const createComment = (event) =>{
     commentHeaderDiv.classList.add("comment-area__default-comment-header");
     commentWrapperDiv.append(commentHeaderDiv);
 
+    // comment
     const commentElem = document.createElement("p");
-    commentElem.innerHTML = commentValue;
+    commentElem.textContent = commentValue;
     commentElem.classList.add("comment-area__default-comment-message");
     commentWrapperDiv.append(commentElem);
 
+    // name
     const commentName = document.createElement("p");
-    commentName.innerHTML = nameValue;
+    commentName.textContent = nameValue;
     commentName.classList.add("comment-area__default-comment-name", "bold");
     commentHeaderDiv.append(commentName);
 
-
+    // time now
     const commentDate = document.createElement("p");
-    commentDate.innerHTML = "Now";
+    commentDate.textContent = "Now";
     commentDate.classList.add("comment-area__default-comment-date");
     commentHeaderDiv.append(commentDate);
 
     commentMainDivOuter.prepend(commentMainDiv);
+
+    // push the comment into the defaultComment array
+    const newComment = {
+        name: nameValue,
+        date: "Now", 
+        comment: commentValue
+    };
+
+    defaultComment.push(newComment);
+    console.log(defaultComment);
     
     // clear the form
     document.getElementById("name").value = '';
@@ -53,6 +64,8 @@ const createComment = (event) =>{
 
 } else {
     alert("Error: your input shouldn't be empty!");
+
+    // show error foreach
     document.querySelectorAll(".comment-area__form-input").forEach(function(inputElem) {
         inputElem.classList.add("comment-area__form-input--error");
     });
