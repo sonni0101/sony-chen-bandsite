@@ -256,11 +256,9 @@ a {
     font-weight: 400;
   }
 }
-
-a:active {
+a:hover {
   color: #ffffff;
 }
-
 a:active {
   color: #ffffff;
 }
