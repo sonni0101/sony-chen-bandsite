@@ -11,6 +11,7 @@
     &::before {
         background-image: url("../assets/Images/hero-bio.jpg");
         @include background-image;
+        height: 100%; 
 
 
         @include desktop{
@@ -19,7 +20,7 @@
         }
     
         @include tablet{
-            height: 40vh; 
+            height: 100%; 
             width: 100vw;
         }
     }
