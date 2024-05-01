@@ -625,7 +625,7 @@ button:hover {
   width: 100vw;
 }
 .hero::before {
-  background-image: url("../assets/Images/hero-bio.jpg");
+  background-image: url("../assets/images/hero-bio.jpg");
   content: "";
   position: absolute;
   top: 0;
@@ -635,6 +635,7 @@ button:hover {
   background-position: center center;
   background-repeat: no-repeat;
   filter: brightness(50%);
+  height: 100%;
 }
 @media screen and (min-width: 1280px) {
   .hero::before {
@@ -644,7 +645,7 @@ button:hover {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero::before {
-    height: 40vh;
+    height: 100%;
     width: 100vw;
   }
 }

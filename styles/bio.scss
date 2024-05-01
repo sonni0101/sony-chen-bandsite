@@ -9,7 +9,7 @@
     width: 100vw;
 
     &::before {
-        background-image: url("../assets/Images/hero-bio.jpg");
+        background-image: url("../assets/images/hero-bio.jpg");
         @include background-image;
         height: 100%; 
 
