@@ -59,7 +59,6 @@ const createComment = (event) =>{
     };
 
     defaultComment.push(newComment);
-    console.log(defaultComment);
     
     // clear the form
     document.getElementById("name").value = '';
