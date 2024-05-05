@@ -7,9 +7,9 @@ export class BandSiteApi {
     getComments = async () => {
         try{
             const url = `${this.baseUrl}comments?api_key=<${this.apiKey}>`;
-            const resposne = await axios.get(url);
-            const result = resposne.data;
-            console.log (result);
+            const response = await axios.get(url);
+            const result = response.data;
+            return result;
         } catch (error) {
             return (error);
         }

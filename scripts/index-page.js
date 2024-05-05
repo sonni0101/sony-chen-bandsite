@@ -1,11 +1,5 @@
 import {BandSiteApi} from "./band-site-api.js";
 
-async function test(){
-    const api = new BandSiteApi;
-    await api.getComments();
-    await api.getShows();
-};
-
 const button = document.getElementById("submit");
 
 const createComment = (event) => {
@@ -90,4 +84,3 @@ const createComment = (event) => {
 
 
 button.addEventListener("click", createComment);
-test();
