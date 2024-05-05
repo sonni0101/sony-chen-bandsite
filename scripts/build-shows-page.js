@@ -1,4 +1,4 @@
-import {BandSiteApi} from './band-site-api.js';
+import { BandSiteApi } from './band-site-api.js';
 const bandAPI = new BandSiteApi;
 
 async function disaplyShows(){
