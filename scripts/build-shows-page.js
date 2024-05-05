@@ -1,9 +1,9 @@
 import {BandSiteApi} from './band-site-api.js';
-const test = new BandSiteApi;
+const BandAPI = new BandSiteApi;
 
 async function testRead(){
     try{
-    const showList = await test.getShows();
+    const showList = await BandAPI.getShows();
 
     for (let i = 0; i < showList.length; i++){
 
@@ -24,7 +24,11 @@ async function testRead(){
     postDateDiv.append(postDateHeader);
 
     const postDateContent = document.createElement("p");
-    postDateContent.textContent = showList[i].date;
+    //time conversion
+    const dateConvert = new Date (showList[i].date);
+    const showTime = dateConvert.toDateString();
+
+    postDateContent.textContent = showTime;
     postDateContent.classList.add("shows__date", "bold");
     postDateDiv.append(postDateContent);
 
