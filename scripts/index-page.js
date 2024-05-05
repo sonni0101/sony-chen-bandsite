@@ -1,6 +1,14 @@
+import {BandSiteApi} from "./band-site-api.js";
+
+async function test(){
+    const api = new BandSiteApi;
+    await api.getComments();
+    await api.getShows();
+};
+
 const button = document.getElementById("submit");
 
-const createComment = (event) =>{
+const createComment = (event) => {
     const commentMainDivOuter = document.querySelector(".comment-area__default-comment-container");
     const nameValue = document.getElementById("name").value;
     const commentValue = document.getElementById("comment").value;
@@ -82,3 +90,4 @@ const createComment = (event) =>{
 
 
 button.addEventListener("click", createComment);
+test();
