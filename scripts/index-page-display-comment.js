@@ -1,7 +1,7 @@
 import { BandSiteApi } from "./band-site-api.js";
 const bandAPI = new BandSiteApi;
 
-async function displayComments(){
+export async function displayComments(){
     try{
         const defaultComment = await bandAPI.getComments();
         console.log(defaultComment);
@@ -44,6 +44,28 @@ async function displayComments(){
             commentElem.textContent = defaultComment[i].comment;
             commentElem.classList.add("comment-area__default-comment-message");
             commentWrapperDiv.append(commentElem);
+
+            // icon button
+            const iconBntWrapper = document.createElement("div");
+            iconBntWrapper.classList.add("comment-area__icon-bnt");
+
+            // like
+            const likeBntWrapper = document.createElement("button");
+            const likeBnt = document.createElement("img");
+            likeBnt.src = "./assets/icons/icon-like.svg";
+            likeBntWrapper.classList.add("button--remove-style");
+            likeBntWrapper.append(likeBnt);
+
+            // delete
+            const deleteBntWrapper = document.createElement("button");
+            const deleteBnt = document.createElement("img");
+            deleteBnt.src = "./assets/icons/icon-delete.svg";
+            deleteBntWrapper.classList.add("button--remove-style");
+            deleteBntWrapper.append(deleteBnt);
+            
+            commentWrapperDiv.append(iconBntWrapper);
+            iconBntWrapper.append(deleteBntWrapper);
+            iconBntWrapper.append(likeBntWrapper);
         
             commentMainDivOuter.prepend(commentMainDiv);
             

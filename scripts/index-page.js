@@ -1,4 +1,6 @@
 import { BandSiteApi } from "./band-site-api.js";
+import { displayComments } from "./index-page-display-comment.js";
+
 const bandApi = new BandSiteApi;
 const button = document.getElementById("submit");
 
@@ -22,6 +24,9 @@ const createComment = async (event) => {
         // post comment
         const postBody = new NewComment(nameValue, commentValue);
         console.log(await bandApi.postComment(postBody));
+
+        // display new comments
+        displayComments();
 
         // clear the form
         document.getElementById("name").value = '';
