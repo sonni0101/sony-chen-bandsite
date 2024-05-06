@@ -1,6 +1,6 @@
 export class BandSiteApi {
     constructor(apiKey, baseUrl) {
-        this.apiKey = "27144eb1-1da3-4727-a8d3-2b47af0e571a";  // Static API key
+        this.apiKey = "b633b25d-d38c-4e8c-9af4-e1a85935a8e3";  // Static API key
         this.baseUrl = 'https://unit-2-project-api-25c1595833b2.herokuapp.com/';  // Static base URL
     }
 
@@ -43,7 +43,7 @@ export class BandSiteApi {
 
     likeComment = async () => {
         try{
-            const url = `${this.baseUrl}/comments/:id/like?api_key=${this.apiKey}`;
+            const url = `${this.baseUrl}comments/:id/like?api_key=${this.apiKey}`;
             const response = await axios.put(url);
             const result = response.data;
             return result;
@@ -52,10 +52,10 @@ export class BandSiteApi {
         }
     };
 
-    deleteComment = async () => {
+    deleteComment = async (commentId) => {
         try{
-            const url = `${this.baseUrl}/comments/:id?api_key=${this.apiKey}`;
-            const response = await axios.delete(url);
+            const url = `${this.baseUrl}comments/${commentId}?api_key=${this.apiKey}`;
+            const response = await axios.delete(url, commentId);
             const result = response.data;
             return result;
         } catch (error) {
