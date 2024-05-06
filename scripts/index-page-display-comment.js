@@ -3,10 +3,11 @@ const bandAPI = new BandSiteApi;
 
 export async function displayComments(){
     try{
-        const defaultComment = await bandAPI.getComments();
-        console.log(defaultComment);
+        const displayComment = await bandAPI.getComments();
+        const likeComment = await bandAPI.likeComment();
+        const deleteComment = await bandAPI.deleteComment();
 
-        for (let i = 0; i < defaultComment.length; i++){        
+        for (let i = 0; i < displayComment.length; i++){        
             const commentMainDiv = document.createElement("div");
             commentMainDiv.classList.add("comment-area__default-comment");
         
@@ -25,7 +26,7 @@ export async function displayComments(){
         
             // name
             const commentName = document.createElement("p");
-            commentName.textContent = defaultComment[i].name;
+            commentName.textContent = displayComment[i].name;
             commentName.classList.add("comment-area__default-comment-name", "bold");
             commentHeaderDiv.append(commentName);
         
@@ -33,7 +34,7 @@ export async function displayComments(){
             const commentDate = document.createElement("p");
             
             // time conversion
-            const dateConvert = new Date (defaultComment[i].timestamp);
+            const dateConvert = new Date (displayComment[i].timestamp);
             const commentTime = dateConvert.toLocaleDateString();
             commentDate.textContent = commentTime;
             commentDate.classList.add("comment-area__default-comment-date");
@@ -41,25 +42,31 @@ export async function displayComments(){
         
             // comment
             const commentElem = document.createElement("p");
-            commentElem.textContent = defaultComment[i].comment;
+            commentElem.textContent = displayComment[i].comment;
             commentElem.classList.add("comment-area__default-comment-message");
             commentWrapperDiv.append(commentElem);
 
             // icon button
             const iconBntWrapper = document.createElement("div");
-            iconBntWrapper.classList.add("comment-area__icon-bnt");
+            iconBntWrapper.classList.add("comment-area__icon-bnt-wrapper");
 
             // like
             const likeBntWrapper = document.createElement("button");
             const likeBnt = document.createElement("img");
             likeBnt.src = "./assets/icons/icon-like.svg";
+            likeBntWrapper.classList.add("comment-area__icon-bnt");
             likeBntWrapper.classList.add("button--remove-style");
             likeBntWrapper.append(likeBnt);
+
+            const likeCountElm = document.createElement("p");
+            likeCountElm.textContent = displayComment[i].like;
+            likeBntWrapper.append(likeCountElm);
 
             // delete
             const deleteBntWrapper = document.createElement("button");
             const deleteBnt = document.createElement("img");
             deleteBnt.src = "./assets/icons/icon-delete.svg";
+            deleteBntWrapper.classList.add("comment-area__icon-bnt");
             deleteBntWrapper.classList.add("button--remove-style");
             deleteBntWrapper.append(deleteBnt);
             

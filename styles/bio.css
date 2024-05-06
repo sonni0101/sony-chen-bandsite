@@ -1090,6 +1090,25 @@ a:active {
     margin: 0;
   }
 }
+.comment-area__icon-bnt-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0.5rem;
+}
+.comment-area__icon-bnt {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+.comment-area__icon-bnt:hover {
+  opacity: 80%;
+}
+.comment-area__icon-bnt:active {
+  opacity: 70%;
+}
 .comment-area__form-label {
   width: 100%;
 }
