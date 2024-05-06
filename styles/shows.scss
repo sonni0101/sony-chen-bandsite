@@ -52,7 +52,7 @@
         }
 
         @include tablet{
-            padding: $spacing-96 $spacing-196 $spacing-96 $tablet-spacing-36;
+            padding: $spacing-96 $spacing-160 $spacing-96 $tablet-spacing-36;
         }
     }
 
@@ -65,20 +65,12 @@
             flex-direction: row;
             align-items: center;
         }
-    }
-
-    &__music-content{
-        display: flex;
-        flex-direction: column;
-
-        // @include tablet{
-        //     padding-bottom: $spacing-56;
-        // }
 
         &--page-header{
             color: $text-primary-on-dark;
             display: flex;
             padding-bottom: $spacing-16;
+            padding-right: $spacing-32;
     
             @include desktop{
                 display: flex;
@@ -92,6 +84,11 @@
                 padding-bottom: $spacing-56;
             }
         }
+    }
+
+    &__music-wrapper{
+        display: flex;
+        flex-direction: column;
 
         &--subtitle{
             @include mobile-subheader;

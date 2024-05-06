@@ -279,10 +279,6 @@ a{
             display: flex;
             flex-direction: row;
         }
-
-        @include tablet{
-            gap: $spacing-8;
-        }
     }
 
     &__link-item{

@@ -371,11 +371,6 @@ a:active {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .nav__link {
-    gap: 0.5rem;
-  }
-}
 .nav__link-item {
   color: #e1e1e1;
   text-align: center;
