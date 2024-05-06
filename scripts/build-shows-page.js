@@ -5,6 +5,7 @@ async function disaplyShows(){
 
     try{
         const showList = await bandAPI.getShows();
+        const showListDiv = document.querySelector(".shows__table");
 
         for (let i = 0; i < showList.length; i++){
     
@@ -80,6 +81,22 @@ async function disaplyShows(){
             createWrapperDiv.append(postButtonDiv);
     }
 
+    // active state colour add
+    const ticketSections = document.querySelectorAll('.shows__ticket-info-wrapper-inner');
+    let selectedTicket = null;
+
+    // when onclick shows the active state
+    ticketSections.forEach(ticketSection => {
+        ticketSection.addEventListener('click', () => {
+            
+            if (selectedTicket !== null) {
+                selectedTicket.classList.remove('shows__ticket-info-wrapper-inner--active'); 
+            }
+            ticketSection.classList.add('shows__ticket-info-wrapper-inner--active'); 
+            selectedTicket = ticketSection; 
+        });
+    });
+
     } catch (error) {
         throw error; 
     }
@@ -88,20 +105,7 @@ async function disaplyShows(){
 disaplyShows();
 
 
-const showListDiv = document.querySelector(".shows__table");
-const ticketSections = document.querySelectorAll('.shows__ticket-info-wrapper-inner');
-let selectedTicket = null;
 
-// when onclick shows the active state
-ticketSections.forEach(ticketSection => {
-    ticketSection.addEventListener('click', () => {
-        if (selectedTicket !== null) {
-            selectedTicket.classList.remove('shows__ticket-info-wrapper-inner--active'); 
-        }
-        ticketSection.classList.add('shows__ticket-info-wrapper-inner--active'); 
-        selectedTicket = ticketSection; 
-    });
-});
 
 
 
