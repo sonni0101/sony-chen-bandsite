@@ -263,7 +263,7 @@ a:active {
   color: #ffffff;
 }
 
-button {
+.button {
   height: 2.5rem;
   width: 100%;
   background: #323232;
@@ -278,7 +278,7 @@ button {
   margin: 0;
 }
 @media screen and (min-width: 1280px) {
-  button {
+  .button {
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -289,7 +289,7 @@ button {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  button {
+  .button {
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -299,8 +299,16 @@ button {
     padding: 0 2rem;
   }
 }
-button:hover {
+.button:hover {
   background: #000000;
+}
+.button--remove-style {
+  text-decoration: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
 }
 
 .secondary-text {
@@ -1081,6 +1089,25 @@ button:hover {
     line-height: 1.25rem;
     margin: 0;
   }
+}
+.comment-area__icon-bnt-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0.5rem;
+}
+.comment-area__icon-bnt {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+.comment-area__icon-bnt:hover {
+  opacity: 80%;
+}
+.comment-area__icon-bnt:active {
+  opacity: 70%;
 }
 .comment-area__form-label {
   width: 100%;
