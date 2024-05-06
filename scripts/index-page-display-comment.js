@@ -54,6 +54,7 @@ export async function displayComments(){
 
             // like
             const likeBntWrapper = document.createElement("button");
+            likeBntWrapper.setAttribute('id',bandSiteComments[i].id+"like" );
             const likeBnt = document.createElement("img");
             likeBnt.src = "./assets/icons/icon-like.svg";
             likeBntWrapper.classList.add("comment-area__icon-bnt");
@@ -61,12 +62,12 @@ export async function displayComments(){
             likeBntWrapper.append(likeBnt);
 
             const likeCountElm = document.createElement("p");
-            likeCountElm.textContent = bandSiteComments[i].like;
+            likeCountElm.textContent = bandSiteComments[i].likes;
             likeBntWrapper.append(likeCountElm);
 
             // delete
             const deleteBntWrapper = document.createElement("button");
-            deleteBntWrapper.setAttribute('id',bandSiteComments[i].id );
+            deleteBntWrapper.setAttribute('id',bandSiteComments[i].id+"delete" );
             const deleteBnt = document.createElement("img");
             deleteBnt.src = "./assets/icons/icon-delete.svg";
             deleteBntWrapper.classList.add("comment-area__icon-bnt");
@@ -82,15 +83,20 @@ export async function displayComments(){
           
         }
         for (let i = 0; i < bandSiteComments.length; i++) {
-            const delCommentBnt = document.getElementById(bandSiteComments[i].id);
+            const delCommentBnt = document.getElementById(bandSiteComments[i].id+"delete");    
+            const likeCommentBnt = document.getElementById(bandSiteComments[i].id+"like");            
         
             delCommentBnt.addEventListener("click", function() {
                  deleteThenDisplay(bandSiteComments[i].id);
             });
 
+            likeCommentBnt.addEventListener("click", function() {
+                likeThenDisplay(bandSiteComments[i].id);
+           });
+
         }
     } catch(error){
-        console.log(error);
+        throw error; 
     }
 };
 
@@ -103,5 +109,9 @@ async function deleteThenDisplay(commentId) {
      displayComments();
 };
 
+async function likeThenDisplay(commentId) {
+    await bandAPI.likeComment(commentId);
+    displayComments();
+};
 
-// deltetDisplay();
+

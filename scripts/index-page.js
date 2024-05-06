@@ -23,7 +23,7 @@ const createComment = async (event) => {
 
         // post comment
         const postBody = new NewComment(nameValue, commentValue);
-        console.log(await bandApi.postComment(postBody));
+        await bandApi.postComment(postBody);
 
         // display new comments
         displayComments();
@@ -46,7 +46,7 @@ const createComment = async (event) => {
         inputElem.classList.add("comment-area__form-input--error");
     });
 }} catch (error){
-    console.log(error);
+    throw error;
 }
 };
 

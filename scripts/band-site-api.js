@@ -41,10 +41,10 @@ export class BandSiteApi {
         }
     };
 
-    likeComment = async () => {
+    likeComment = async (commentId) => {
         try{
-            const url = `${this.baseUrl}comments/:id/like?api_key=${this.apiKey}`;
-            const response = await axios.put(url);
+            const url = `${this.baseUrl}comments/${commentId}/like?api_key=${this.apiKey}`;
+            const response = await axios.put(url, commentId);
             const result = response.data;
             return result;
         } catch (error) {
@@ -64,12 +64,4 @@ export class BandSiteApi {
     };
 }
 
-
-// async function test(){
-//     const api = new BandSiteApi;
-//     await api.getComments();
-//     await api.getShows();
-// };
-
-// test();
 
