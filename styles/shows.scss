@@ -56,13 +56,24 @@
         }
     }
 
-    &__music-content{
-        flex: 4;
-        padding-right: $spacing-72;
+    &__music-frame{
+        display: flex;
+        flex-direction: column;
 
-        @include tablet{
-            padding-bottom: $spacing-56;
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
+    }
+
+    &__music-content{
+        display: flex;
+        flex-direction: column;
+
+        // @include tablet{
+        //     padding-bottom: $spacing-56;
+        // }
 
         &--page-header{
             color: $text-primary-on-dark;
@@ -72,11 +83,13 @@
             @include desktop{
                 display: flex;
                 align-items: center; 
-                padding: 0;       
+                padding: 0;    
+                padding-right: $spacing-48;  
+                flex: 5; 
             }
 
             @include tablet{
-                padding: 0;       
+                padding-bottom: $spacing-56;
             }
         }
 
@@ -96,7 +109,7 @@
     }
 
     &__soundsCloud{
-        flex: 3;
+        flex: 4;
         width: 100%;
 
         @include tablet{
