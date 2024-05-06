@@ -2,12 +2,11 @@ import { BandSiteApi } from "./band-site-api.js";
 const bandAPI = new BandSiteApi;
 
 async function displayComments(){
-
     try{
         const defaultComment = await bandAPI.getComments();
+        console.log(defaultComment);
 
-        for (let i = defaultComment.length - 1; i >= 0; i--){
-
+        for (let i = 0; i < defaultComment.length; i++){        
             const commentMainDiv = document.createElement("div");
             commentMainDiv.classList.add("comment-area__default-comment");
         
