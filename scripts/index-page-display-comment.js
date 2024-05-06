@@ -62,6 +62,7 @@ export async function displayComments(){
             likeBntWrapper.append(likeBnt);
 
             const likeCountElm = document.createElement("p");
+            likeCountElm.textContent = "0";
             likeCountElm.textContent = bandSiteComments[i].likes;
             likeBntWrapper.append(likeCountElm);
 
